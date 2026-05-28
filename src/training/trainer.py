@@ -13,7 +13,7 @@ from ..config import GAN, GANConfig
 from ..models.dcgan import Discriminator, Generator
 from ..utils.image_io import save_grid
 from .checkpoint import save_checkpoint
-from .losses import conditional_hinge_d_loss, hinge_g_loss
+from .losses import class_consistency_loss, conditional_hinge_d_loss, hinge_g_loss
 
 
 def _amp_dtype(name: str) -> torch.dtype:
@@ -39,6 +39,15 @@ def _r1_penalty(d_out: torch.Tensor, real: torch.Tensor) -> torch.Tensor:
 def _wrong_labels(labels: torch.Tensor, num_classes: int) -> torch.Tensor:
     offsets = torch.randint(1, num_classes, labels.shape, device=labels.device)
     return (labels + offsets) % num_classes
+
+
+def _image_stats(images: torch.Tensor) -> dict[str, float]:
+    images = images.detach().float()
+    return {
+        "std": float(images.std().item()),
+        "min": float(images.min().item()),
+        "max": float(images.max().item()),
+    }
 
 
 class GANTrainer:
@@ -91,6 +100,7 @@ class GANTrainer:
         loss_g_acc = torch.zeros((), device=self.device)
         loss_d_acc = torch.zeros((), device=self.device)
         loss_aux_acc = torch.zeros((), device=self.device)
+        loss_g_aux_acc = torch.zeros((), device=self.device)
         r1_acc = torch.zeros((), device=self.device)
         count = 0
         d_count = 0
@@ -160,7 +170,9 @@ class GANTrainer:
                 with self._autocast():
                     fake = self.G(z, fake_labels)
                     d_fake_g = self.D(fake, fake_labels)
-                    loss_g = hinge_g_loss(d_fake_g)
+                    fake_class_logits = self.D.classify(fake)
+                    loss_g_aux = class_consistency_loss(fake_class_logits, fake_labels)
+                    loss_g = hinge_g_loss(d_fake_g) + cfg.g_aux_loss_weight * loss_g_aux
                 self.opt_g.zero_grad(set_to_none=True)
                 loss_g.backward()
                 self.opt_g.step()
@@ -170,6 +182,7 @@ class GANTrainer:
                 _ema_update(self.G_ema, self.G, decay)
 
                 loss_g_acc += loss_g.detach()
+                loss_g_aux_acc += loss_g_aux.detach()
                 count += 1
                 self.global_step += 1
 
@@ -177,15 +190,18 @@ class GANTrainer:
                     g_avg = (loss_g_acc / count).item()
                     d_avg = (loss_d_acc / d_count).item()
                     aux_avg = (loss_aux_acc / d_count).item()
+                    g_aux_avg = (loss_g_aux_acc / count).item()
                     r1_avg = (r1_acc / r1_count).item() if r1_count else 0.0
                     print(
                         f"  step {self.global_step:>7d}  "
-                        f"G {g_avg:.4f}  D {d_avg:.4f}  Aux {aux_avg:.4f}  R1 {r1_avg:.4f}",
+                        f"G {g_avg:.4f}  D {d_avg:.4f}  Aux {aux_avg:.4f}  "
+                        f"GAux {g_aux_avg:.4f}  R1 {r1_avg:.4f}",
                         flush=True,
                     )
                     loss_g_acc.zero_()
                     loss_d_acc.zero_()
                     loss_aux_acc.zero_()
+                    loss_g_aux_acc.zero_()
                     r1_acc.zero_()
                     count = 0
                     d_count = 0
@@ -258,12 +274,14 @@ class GANTrainer:
         feature_std = real_features.float().std(dim=0).mean()
         image_diversity = div_fake.view(self.cfg.num_classes, 8, *div_fake.shape[1:]).std(dim=1)
         image_diversity = image_diversity.mean()
+        fake_stats = _image_stats(fake)
         print(
             f"  diag step {self.global_step:>7d}  "
             f"Dreal {d_real.mean().item():.4f}  Dfake {d_fake.mean().item():.4f}  "
             f"Dwrong {d_wrong.mean().item():.4f}  gap {(d_real - d_wrong).mean().item():.4f}  "
             f"cls_acc {class_acc.item():.3f}  feat_std {feature_std.item():.6f}  "
-            f"ema_div {image_diversity.item():.4f}",
+            f"ema_div {image_diversity.item():.4f}  fake_std {fake_stats['std']:.4f}  "
+            f"fake_min {fake_stats['min']:.4f}  fake_max {fake_stats['max']:.4f}",
             flush=True,
         )
         self.D.train()

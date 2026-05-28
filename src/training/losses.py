@@ -46,3 +46,8 @@ def conditional_hinge_d_loss(
 def hinge_g_loss(fake_logits: torch.Tensor) -> torch.Tensor:
     """SN-GAN generator hinge loss."""
     return -fake_logits.mean()
+
+
+def class_consistency_loss(class_logits: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+    """Cross-entropy term used to make fake images class-discriminative."""
+    return F.cross_entropy(class_logits.float(), labels)

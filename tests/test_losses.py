@@ -3,6 +3,7 @@ import torch
 import pytest
 
 from src.training.losses import (
+    class_consistency_loss,
     conditional_hinge_d_loss,
     hinge_d_loss,
     hinge_g_loss,
@@ -80,3 +81,13 @@ def test_conditional_hinge_d_loss_includes_wrong_label_term():
 def test_conditional_hinge_d_loss_matches_base_without_wrong_labels():
     real, fake = _logits()
     assert torch.allclose(conditional_hinge_d_loss(real, fake), hinge_d_loss(real, fake))
+
+
+def test_class_consistency_loss_matches_cross_entropy():
+    logits = torch.tensor([[2.0, 0.0, -1.0], [0.0, 1.5, -0.5]], requires_grad=True)
+    labels = torch.tensor([0, 1])
+    loss = class_consistency_loss(logits, labels)
+    expected = torch.nn.functional.cross_entropy(logits, labels)
+    assert torch.allclose(loss, expected)
+    loss.backward()
+    assert logits.grad is not None

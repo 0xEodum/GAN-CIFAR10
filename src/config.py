@@ -28,6 +28,7 @@ class GANConfig:
     # Conditional-D safeguards: real/wrong-label negatives and image-only class head
     wrong_label_weight: float = 1.0
     aux_loss_weight: float = 0.5
+    g_aux_loss_weight: float = 0.0
     # Optional lazy R1 gradient penalty. SN-GAN normally keeps this disabled.
     r1_gamma: float = 0.0
     r1_every: int = 16

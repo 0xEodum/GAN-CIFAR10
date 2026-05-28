@@ -30,6 +30,7 @@ def main() -> None:
     parser.add_argument("--d-steps", type=int, default=GAN.d_steps)
     parser.add_argument("--wrong-label-weight", type=float, default=GAN.wrong_label_weight)
     parser.add_argument("--aux-loss-weight", type=float, default=GAN.aux_loss_weight)
+    parser.add_argument("--g-aux-loss-weight", type=float, default=GAN.g_aux_loss_weight)
     parser.add_argument("--r1-gamma", type=float, default=GAN.r1_gamma)
     parser.add_argument("--max-steps", type=int, default=GAN.max_steps)
     parser.add_argument("--ckpt-dir", type=Path, default=GAN.ckpt_dir_override)
@@ -57,6 +58,7 @@ def main() -> None:
         d_steps=args.d_steps,
         wrong_label_weight=args.wrong_label_weight,
         aux_loss_weight=args.aux_loss_weight,
+        g_aux_loss_weight=args.g_aux_loss_weight,
         r1_gamma=args.r1_gamma,
         max_steps=args.max_steps,
         ckpt_dir_override=args.ckpt_dir,
@@ -85,7 +87,8 @@ def main() -> None:
     print(f"z_dim={cfg.z_dim}  g_base={cfg.g_base}  d_base={cfg.d_base}", flush=True)
     print(f"lr_g={cfg.lr_g}  lr_d={cfg.lr_d}  d_steps={cfg.d_steps}  amp={cfg.amp_dtype}", flush=True)
     print(
-        f"wrong_label_weight={cfg.wrong_label_weight}  aux_loss_weight={cfg.aux_loss_weight}",
+        f"wrong_label_weight={cfg.wrong_label_weight}  aux_loss_weight={cfg.aux_loss_weight}  "
+        f"g_aux_loss_weight={cfg.g_aux_loss_weight}",
         flush=True,
     )
     print(f"conditional classes={cfg.num_classes}  max_steps={cfg.max_steps}", flush=True)
