@@ -40,6 +40,7 @@ def main() -> None:
     parser.add_argument("--log-every", type=int, default=GAN.log_every)
     parser.add_argument("--diagnostics-every", type=int, default=GAN.diagnostics_every)
     parser.add_argument("--sample-every", type=int, default=GAN.sample_every)
+    parser.add_argument("--keep-ckpt-every", type=int, default=GAN.keep_ckpt_every)
     parser.add_argument("--ckpt-every", type=int, default=GAN.ckpt_every)
     parser.add_argument("--seed", type=int, default=GAN.seed)
     args = parser.parse_args()
@@ -67,6 +68,7 @@ def main() -> None:
         log_every=args.log_every,
         diagnostics_every=args.diagnostics_every,
         sample_every=args.sample_every,
+        keep_ckpt_every=args.keep_ckpt_every,
         ckpt_every=args.ckpt_every,
         seed=args.seed,
     )
@@ -92,6 +94,7 @@ def main() -> None:
         flush=True,
     )
     print(f"conditional classes={cfg.num_classes}  max_steps={cfg.max_steps}", flush=True)
+    print(f"keep_ckpt_every={cfg.keep_ckpt_every}  ckpt_every_epochs={cfg.ckpt_every}", flush=True)
     print(f"ckpt: {cfg.ckpt_dir}  samples: {cfg.sample_dir}", flush=True)
 
     trainer = GANTrainer(cfg, device="cuda")

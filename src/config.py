@@ -46,6 +46,7 @@ class GANConfig:
     log_every: int = 100
     diagnostics_every: int = 500
     sample_every: int = 500
+    keep_ckpt_every: int = 5000
     ckpt_every: int = 5
     # Mixed precision
     amp_dtype: str = "bf16"

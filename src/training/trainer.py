@@ -12,7 +12,7 @@ from torch.utils.data import DataLoader
 from ..config import GAN, GANConfig
 from ..models.dcgan import Discriminator, Generator
 from ..utils.image_io import save_grid
-from .checkpoint import save_checkpoint
+from .checkpoint import checkpoint_path_for_step, save_checkpoint
 from .losses import class_consistency_loss, conditional_hinge_d_loss, hinge_g_loss
 
 
@@ -213,6 +213,9 @@ class GANTrainer:
                 if self.global_step % cfg.sample_every == 0:
                     self._dump_samples(self.global_step)
 
+                if cfg.keep_ckpt_every > 0 and self.global_step % cfg.keep_ckpt_every == 0:
+                    self._save(epoch, keep_step_snapshot=True)
+
                 if cfg.max_steps is not None and self.global_step >= cfg.max_steps:
                     should_stop = True
                     break
@@ -222,7 +225,7 @@ class GANTrainer:
             if (epoch + 1) % cfg.ckpt_every == 0:
                 self._save(epoch)
             if should_stop:
-                self._save(epoch)
+                self._save(epoch, keep_step_snapshot=True)
                 break
 
     def _dump_samples(self, step: int) -> None:
@@ -286,17 +289,20 @@ class GANTrainer:
         )
         self.D.train()
 
-    def _save(self, epoch: int) -> None:
-        save_checkpoint(
-            self.cfg.ckpt_dir / "latest.pt",
-            {
-                "epoch": epoch,
-                "step": self.global_step,
-                "G": self.G.state_dict(),
-                "G_ema": self.G_ema.state_dict(),
-                "D": self.D.state_dict(),
-                "opt_g": self.opt_g.state_dict(),
-                "opt_d": self.opt_d.state_dict(),
-                "config": self.cfg.__dict__,
-            },
-        )
+    def _checkpoint_payload(self, epoch: int) -> dict:
+        return {
+            "epoch": epoch,
+            "step": self.global_step,
+            "G": self.G.state_dict(),
+            "G_ema": self.G_ema.state_dict(),
+            "D": self.D.state_dict(),
+            "opt_g": self.opt_g.state_dict(),
+            "opt_d": self.opt_d.state_dict(),
+            "config": self.cfg.__dict__,
+        }
+
+    def _save(self, epoch: int, keep_step_snapshot: bool = False) -> None:
+        payload = self._checkpoint_payload(epoch)
+        save_checkpoint(self.cfg.ckpt_dir / "latest.pt", payload)
+        if keep_step_snapshot:
+            save_checkpoint(checkpoint_path_for_step(self.cfg.ckpt_dir, self.global_step), payload)
