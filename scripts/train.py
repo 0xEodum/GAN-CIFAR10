@@ -28,6 +28,7 @@ def main() -> None:
     parser.add_argument("--lr-g", type=float, default=GAN.lr_g)
     parser.add_argument("--lr-d", type=float, default=GAN.lr_d)
     parser.add_argument("--d-steps", type=int, default=GAN.d_steps)
+    parser.add_argument("--adv-loss", default=GAN.adv_loss, choices=["ralsgan", "hinge"])
     parser.add_argument("--wrong-label-weight", type=float, default=GAN.wrong_label_weight)
     parser.add_argument("--aux-loss-weight", type=float, default=GAN.aux_loss_weight)
     parser.add_argument("--g-aux-loss-weight", type=float, default=GAN.g_aux_loss_weight)
@@ -57,6 +58,7 @@ def main() -> None:
         lr_g=args.lr_g,
         lr_d=args.lr_d,
         d_steps=args.d_steps,
+        adv_loss=args.adv_loss,
         wrong_label_weight=args.wrong_label_weight,
         aux_loss_weight=args.aux_loss_weight,
         g_aux_loss_weight=args.g_aux_loss_weight,
@@ -87,7 +89,11 @@ def main() -> None:
 
     print(f"Dataset: CIFAR-10  batches/epoch: {len(loader)}", flush=True)
     print(f"z_dim={cfg.z_dim}  g_base={cfg.g_base}  d_base={cfg.d_base}", flush=True)
-    print(f"lr_g={cfg.lr_g}  lr_d={cfg.lr_d}  d_steps={cfg.d_steps}  amp={cfg.amp_dtype}", flush=True)
+    print(
+        f"lr_g={cfg.lr_g}  lr_d={cfg.lr_d}  d_steps={cfg.d_steps}  "
+        f"adv_loss={cfg.adv_loss}  amp={cfg.amp_dtype}",
+        flush=True,
+    )
     print(
         f"wrong_label_weight={cfg.wrong_label_weight}  aux_loss_weight={cfg.aux_loss_weight}  "
         f"g_aux_loss_weight={cfg.g_aux_loss_weight}",

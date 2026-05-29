@@ -5,6 +5,7 @@ import pytest
 from src.training.losses import (
     class_consistency_loss,
     conditional_hinge_d_loss,
+    conditional_ralsgan_d_loss,
     hinge_d_loss,
     hinge_g_loss,
     ralsgan_d_loss,
@@ -81,6 +82,29 @@ def test_conditional_hinge_d_loss_includes_wrong_label_term():
 def test_conditional_hinge_d_loss_matches_base_without_wrong_labels():
     real, fake = _logits()
     assert torch.allclose(conditional_hinge_d_loss(real, fake), hinge_d_loss(real, fake))
+
+
+def test_conditional_ralsgan_d_loss_matches_base_without_wrong_labels():
+    real, fake = _logits()
+    assert torch.allclose(conditional_ralsgan_d_loss(real, fake), ralsgan_d_loss(real, fake))
+
+
+def test_conditional_ralsgan_d_loss_penalizes_wrong_label():
+    real = torch.full((4,), 0.5)
+    fake = torch.full((4,), -0.5)
+    wrong_good = torch.full((4,), -0.5)  # wrong-labeled real scored low: good
+    wrong_bad = torch.full((4,), 0.5)    # wrong-labeled real scored high: bad
+    loss_good = conditional_ralsgan_d_loss(real, fake, wrong_good)
+    loss_bad = conditional_ralsgan_d_loss(real, fake, wrong_bad)
+    assert loss_bad > loss_good
+
+
+def test_conditional_ralsgan_d_loss_has_gradient():
+    real = torch.randn(8, requires_grad=True)
+    fake = torch.randn(8, requires_grad=True)
+    wrong = torch.randn(8, requires_grad=True)
+    conditional_ralsgan_d_loss(real, fake, wrong).backward()
+    assert real.grad is not None and fake.grad is not None and wrong.grad is not None
 
 
 def test_class_consistency_loss_matches_cross_entropy():

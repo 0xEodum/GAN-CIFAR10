@@ -13,7 +13,13 @@ from ..config import GAN, GANConfig
 from ..models.dcgan import Discriminator, Generator
 from ..utils.image_io import save_grid
 from .checkpoint import checkpoint_path_for_step, save_checkpoint
-from .losses import class_consistency_loss, conditional_hinge_d_loss, hinge_g_loss
+from .losses import (
+    class_consistency_loss,
+    conditional_hinge_d_loss,
+    conditional_ralsgan_d_loss,
+    hinge_g_loss,
+    ralsgan_g_loss,
+)
 
 
 def _amp_dtype(name: str) -> torch.dtype:
@@ -136,8 +142,13 @@ class GANTrainer:
                         class_logits = self.D.classify_features(real_features)
                         d_fake = self.D(fake.detach(), fake_labels)
                         loss_aux = F.cross_entropy(class_logits.float(), labels)
+                        d_loss_fn = (
+                            conditional_ralsgan_d_loss
+                            if cfg.adv_loss == "ralsgan"
+                            else conditional_hinge_d_loss
+                        )
                         loss_d = (
-                            conditional_hinge_d_loss(
+                            d_loss_fn(
                                 d_real,
                                 d_fake,
                                 d_wrong,
@@ -170,9 +181,16 @@ class GANTrainer:
                 with self._autocast():
                     fake = self.G(z, fake_labels)
                     d_fake_g = self.D(fake, fake_labels)
+                    if cfg.adv_loss == "ralsgan":
+                        # Real logits act as a fixed relativistic reference for G.
+                        with torch.no_grad():
+                            d_real_g = self.D(real, labels)
+                        loss_g_main = ralsgan_g_loss(d_real_g, d_fake_g)
+                    else:
+                        loss_g_main = hinge_g_loss(d_fake_g)
                     fake_class_logits = self.D.classify(fake)
                     loss_g_aux = class_consistency_loss(fake_class_logits, fake_labels)
-                    loss_g = hinge_g_loss(d_fake_g) + cfg.g_aux_loss_weight * loss_g_aux
+                    loss_g = loss_g_main + cfg.g_aux_loss_weight * loss_g_aux
                 self.opt_g.zero_grad(set_to_none=True)
                 loss_g.backward()
                 self.opt_g.step()

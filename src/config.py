@@ -19,15 +19,20 @@ class GANConfig:
     z_dim: int = 128
     g_base: int = 64
     d_base: int = 64
-    # Optimizer for class-conditional SN-GAN with hinge loss
+    # Adversarial loss: "ralsgan" (relativistic, no dead zone -> keeps contrast)
+    # or "hinge" (classic SN-GAN; prone to a low-contrast/gray equilibrium here).
+    adv_loss: str = "ralsgan"
+    # Optimizer for class-conditional SN-GAN
     lr_g: float = 2e-4
     lr_d: float = 2e-4
-    d_steps: int = 2
+    d_steps: int = 1
     beta1: float = 0.0
     beta2: float = 0.9
-    # Conditional-D safeguards: real/wrong-label negatives and image-only class head
-    wrong_label_weight: float = 1.0
-    aux_loss_weight: float = 0.5
+    # Conditional-D safeguards: real/wrong-label negatives and image-only class head.
+    # Kept modest so the realism signal dominates over class confidence (a
+    # class-obsessed D washes contrast out toward the per-class mean).
+    wrong_label_weight: float = 0.5
+    aux_loss_weight: float = 0.1
     g_aux_loss_weight: float = 0.0
     # Optional lazy R1 gradient penalty. SN-GAN normally keeps this disabled.
     r1_gamma: float = 0.0

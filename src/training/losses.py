@@ -25,6 +25,28 @@ def ralsgan_g_loss(real_logits: torch.Tensor, fake_logits: torch.Tensor) -> torc
     )
 
 
+def conditional_ralsgan_d_loss(
+    real_logits: torch.Tensor,
+    fake_logits: torch.Tensor,
+    wrong_label_logits: torch.Tensor | None = None,
+    wrong_label_weight: float = 1.0,
+) -> torch.Tensor:
+    """Relativistic average LSGAN D loss with an optional wrong-label negative.
+
+    Unlike hinge, RaLSGAN has no dead zone: the generator keeps receiving a
+    contrast-restoring gradient even when fakes already score near the margin,
+    which prevents the low-amplitude (gray) equilibrium.
+    """
+    loss = ralsgan_d_loss(real_logits, fake_logits)
+    if wrong_label_logits is not None:
+        # Real image with the wrong label should look like a relativistic "fake".
+        wrong_centered = wrong_label_logits - real_logits.mean()
+        loss = loss + wrong_label_weight * F.mse_loss(
+            wrong_centered, -torch.ones_like(wrong_centered)
+        )
+    return loss
+
+
 def hinge_d_loss(real_logits: torch.Tensor, fake_logits: torch.Tensor) -> torch.Tensor:
     """SN-GAN discriminator hinge loss."""
     return F.relu(1.0 - real_logits).mean() + F.relu(1.0 + fake_logits).mean()
