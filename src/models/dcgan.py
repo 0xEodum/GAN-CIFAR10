@@ -20,6 +20,13 @@ def _param_weight(module: nn.Module) -> torch.Tensor | None:
 
 
 def _init_weights(module: nn.Module) -> None:
+    # ConditionalBatchNorm2d sets its own affine embedding (gamma=1, beta=0) in
+    # its constructor. Those embeddings must NOT be overwritten by the generic
+    # normal_(0, 0.02) below — doing so collapses the BN gain to ~0 and forces
+    # the generator to emit near-gray, low-contrast images.
+    cbn_embeds = {
+        id(m.embed) for m in module.modules() if isinstance(m, ConditionalBatchNorm2d)
+    }
     for m in module.modules():
         if isinstance(m, (nn.Conv2d, nn.Linear)):
             weight = _param_weight(m)
@@ -27,7 +34,7 @@ def _init_weights(module: nn.Module) -> None:
                 nn.init.orthogonal_(weight)
             if m.bias is not None:
                 nn.init.zeros_(m.bias)
-        elif isinstance(m, nn.Embedding):
+        elif isinstance(m, nn.Embedding) and id(m) not in cbn_embeds:
             weight = _param_weight(m)
             if weight is not None:
                 nn.init.normal_(weight, 0.0, 0.02)

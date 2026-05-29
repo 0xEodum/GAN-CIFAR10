@@ -2,7 +2,7 @@
 import torch
 import pytest
 
-from src.models.dcgan import Discriminator, Generator
+from src.models.dcgan import ConditionalBatchNorm2d, Discriminator, Generator
 
 
 def test_generator_output_shape():
@@ -110,6 +110,37 @@ def test_discriminator_true_wrong_label_gap_is_image_conditioned():
         wrong_scores = d(x, wrong)
     assert true_scores.shape == wrong_scores.shape == (4,)
     assert not torch.allclose(true_scores, wrong_scores)
+
+
+def test_conditional_bn_gamma_initialized_to_one():
+    """Regression: _init_weights must NOT clobber CBN affine embeddings.
+
+    The CBN gain (gamma) must start at 1.0 so the generator emits
+    full-contrast images. A bug where the generic Embedding init overwrote
+    gamma with normal_(0, 0.02) caused near-gray, low-contrast samples.
+    """
+    g = Generator(z_dim=64, num_channels=3, base=16, num_classes=10)
+    for m in g.modules():
+        if isinstance(m, ConditionalBatchNorm2d):
+            nf = m.embed.weight.shape[1] // 2
+            gamma = m.embed.weight[:, :nf]
+            beta = m.embed.weight[:, nf:]
+            assert torch.allclose(gamma, torch.ones_like(gamma)), "CBN gamma must init to 1.0"
+            assert torch.allclose(beta, torch.zeros_like(beta)), "CBN beta must init to 0.0"
+
+
+def test_generator_emits_full_contrast_at_init():
+    """A freshly initialized generator must produce high-variance output.
+
+    In train mode (BN normalizes to unit variance) the output std should be
+    well above the collapsed-gray regime (~0.09). We require >0.25.
+    """
+    g = Generator(z_dim=64, num_channels=3, base=16, num_classes=10).train()
+    z = torch.randn(64, 64)
+    labels = torch.arange(64) % 10
+    with torch.no_grad():
+        out = g(z, labels)
+    assert out.std().item() > 0.25, f"generator output std too low: {out.std().item():.4f}"
 
 
 def test_generator_grad_flows():
