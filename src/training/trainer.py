@@ -308,6 +308,14 @@ class GANTrainer:
         self.D.train()
 
     def _checkpoint_payload(self, epoch: int) -> dict:
+        # Serialize Path fields as strings so the checkpoint is portable across
+        # Python versions (pathlib was refactored into a package in 3.13, making
+        # Path objects unpicklable on 3.12 and earlier).
+        from pathlib import Path as _Path
+        config_safe = {
+            k: str(v) if isinstance(v, _Path) else v
+            for k, v in self.cfg.__dict__.items()
+        }
         return {
             "epoch": epoch,
             "step": self.global_step,
@@ -316,7 +324,7 @@ class GANTrainer:
             "D": self.D.state_dict(),
             "opt_g": self.opt_g.state_dict(),
             "opt_d": self.opt_d.state_dict(),
-            "config": self.cfg.__dict__,
+            "config": config_safe,
         }
 
     def _save(self, epoch: int, keep_step_snapshot: bool = False) -> None:
