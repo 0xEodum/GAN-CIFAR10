@@ -2,7 +2,7 @@
 import torch
 import pytest
 
-from src.training.losses import (
+from gan_cifar.training.losses import (
     class_consistency_loss,
     conditional_hinge_d_loss,
     conditional_ralsgan_d_loss,

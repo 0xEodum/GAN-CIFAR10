@@ -8,12 +8,12 @@ from pathlib import Path
 
 import torch
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from src.config import GAN
-from src.data.cifar_dataset import build_loader
-from src.training.trainer import GANTrainer
-from src.utils.seed import seed_all
+from gan_cifar.config import GAN
+from gan_cifar.data.cifar_dataset import build_loader
+from gan_cifar.training.trainer import GANTrainer
+from gan_cifar.utils.seed import seed_all
 
 
 def main() -> None:

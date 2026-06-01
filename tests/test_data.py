@@ -3,7 +3,7 @@ import torch
 import pytest
 from pathlib import Path
 
-from src.data.cifar_dataset import CIFAR10Images
+from gan_cifar.data.cifar_dataset import CIFAR10Images
 
 
 @pytest.fixture(scope="module")

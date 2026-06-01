@@ -6,10 +6,10 @@ from pathlib import Path
 
 import torch
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from src.config import GAN
-from src.models.dcgan import Discriminator, Generator
+from gan_cifar.config import GAN
+from gan_cifar.models.dcgan import Discriminator, Generator
 
 
 def main() -> None:

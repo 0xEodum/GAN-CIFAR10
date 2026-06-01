@@ -2,7 +2,7 @@
 import torch
 import pytest
 
-from src.models.dcgan import ConditionalBatchNorm2d, Discriminator, Generator
+from gan_cifar.models.dcgan import ConditionalBatchNorm2d, Discriminator, Generator
 
 
 def test_generator_output_shape():

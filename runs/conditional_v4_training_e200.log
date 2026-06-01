@@ -1,0 +1,1143 @@
+Dataset: CIFAR-10  batches/epoch: 390
+z_dim=128  g_base=64  d_base=64
+lr_g=0.0002  lr_d=0.0002  d_steps=2  amp=bf16
+wrong_label_weight=1.0  aux_loss_weight=0.5  g_aux_loss_weight=0.02
+conditional classes=10  max_steps=None
+keep_ckpt_every=5000  ckpt_every_epochs=5
+ckpt: checkpoints_conditional_v4  samples: samples_conditional_v4
+  step     100  G 0.0309  D 3.4480  Aux 1.8766  GAux 2.1793  R1 0.0000
+  step     200  G -0.0141  D 3.0106  Aux 1.5799  GAux 1.9878  R1 0.0000
+  step     300  G 0.0249  D 2.8873  Aux 1.4852  GAux 1.9900  R1 0.0000
+[epoch 000] 61.7s
+  step     400  G -0.0220  D 2.7964  Aux 1.3765  GAux 1.8779  R1 0.0000
+  step     500  G 0.0044  D 2.7296  Aux 1.3008  GAux 1.7431  R1 0.0000
+  diag step     500  Dreal 0.5509  Dfake -0.0283  Dwrong -1.4842  gap 2.0351  cls_acc 0.562  feat_std 0.346184  ema_div 0.0520  fake_std 0.0862  fake_min -0.4902  fake_max 0.4824
+  step     600  G 0.0202  D 2.6478  Aux 1.2397  GAux 1.7635  R1 0.0000
+  step     700  G 0.0023  D 2.6081  Aux 1.1887  GAux 1.6570  R1 0.0000
+[epoch 001] 42.4s
+  step     800  G 0.0007  D 2.6010  Aux 1.1656  GAux 1.5586  R1 0.0000
+  step     900  G 0.0093  D 2.5311  Aux 1.1007  GAux 1.5145  R1 0.0000
+  step    1000  G -0.0078  D 2.5360  Aux 1.0740  GAux 1.4350  R1 0.0000
+  diag step    1000  Dreal 0.5544  Dfake -0.2752  Dwrong -1.9086  gap 2.4630  cls_acc 0.750  feat_std 0.400409  ema_div 0.0526  fake_std 0.0809  fake_min -0.3887  fake_max 0.5586
+  step    1100  G -0.0065  D 2.5055  Aux 1.0349  GAux 1.3392  R1 0.0000
+[epoch 002] 41.9s
+  step    1200  G 0.0066  D 2.5083  Aux 1.0371  GAux 1.3168  R1 0.0000
+  step    1300  G 0.0023  D 2.4675  Aux 0.9863  GAux 1.2846  R1 0.0000
+  step    1400  G 0.0008  D 2.4395  Aux 0.9585  GAux 1.2538  R1 0.0000
+  step    1500  G -0.0002  D 2.4372  Aux 0.9431  GAux 1.1845  R1 0.0000
+  diag step    1500  Dreal 0.5905  Dfake -0.2207  Dwrong -2.5546  gap 3.1451  cls_acc 0.703  feat_std 0.406430  ema_div 0.0611  fake_std 0.0945  fake_min -0.4141  fake_max 0.3301
+[epoch 003] 42.6s
+  step    1600  G 0.0095  D 2.4171  Aux 0.9213  GAux 1.1821  R1 0.0000
+  step    1700  G 0.0006  D 2.4007  Aux 0.8982  GAux 1.1138  R1 0.0000
+  step    1800  G 0.0013  D 2.3802  Aux 0.8871  GAux 1.1078  R1 0.0000
+  step    1900  G 0.0022  D 2.3859  Aux 0.8756  GAux 1.0722  R1 0.0000
+[epoch 004] 40.5s
+  step    2000  G 0.0071  D 2.3585  Aux 0.8366  GAux 1.0367  R1 0.0000
+  diag step    2000  Dreal 0.5490  Dfake -0.1110  Dwrong -1.9792  gap 2.5282  cls_acc 0.797  feat_std 0.414985  ema_div 0.0732  fake_std 0.0938  fake_min -0.3535  fake_max 0.3965
+  step    2100  G -0.0038  D 2.3459  Aux 0.8276  GAux 0.9962  R1 0.0000
+  step    2200  G 0.0154  D 2.3373  Aux 0.8087  GAux 0.9876  R1 0.0000
+  step    2300  G 0.0113  D 2.3212  Aux 0.7964  GAux 0.9779  R1 0.0000
+[epoch 005] 41.3s
+  step    2400  G 0.0109  D 2.3293  Aux 0.7907  GAux 0.9480  R1 0.0000
+  step    2500  G 0.0082  D 2.3125  Aux 0.7783  GAux 0.9246  R1 0.0000
+  diag step    2500  Dreal 0.6478  Dfake 0.0028  Dwrong -2.3421  gap 2.9899  cls_acc 0.812  feat_std 0.436540  ema_div 0.0860  fake_std 0.1050  fake_min -0.3711  fake_max 0.3711
+  step    2600  G 0.0131  D 2.2972  Aux 0.7603  GAux 0.9133  R1 0.0000
+  step    2700  G 0.0219  D 2.2814  Aux 0.7486  GAux 0.8995  R1 0.0000
+[epoch 006] 40.3s
+  step    2800  G 0.0126  D 2.2753  Aux 0.7312  GAux 0.8654  R1 0.0000
+  step    2900  G 0.0221  D 2.2671  Aux 0.7206  GAux 0.8582  R1 0.0000
+  step    3000  G 0.0284  D 2.2554  Aux 0.7312  GAux 0.8722  R1 0.0000
+  diag step    3000  Dreal 0.8686  Dfake 0.0059  Dwrong -2.2827  gap 3.1513  cls_acc 0.781  feat_std 0.461744  ema_div 0.1018  fake_std 0.1179  fake_min -0.3945  fake_max 0.3965
+  step    3100  G 0.0214  D 2.2449  Aux 0.7067  GAux 0.8474  R1 0.0000
+[epoch 007] 40.7s
+  step    3200  G 0.0267  D 2.2390  Aux 0.7027  GAux 0.8479  R1 0.0000
+  step    3300  G 0.0194  D 2.2189  Aux 0.6892  GAux 0.8368  R1 0.0000
+  step    3400  G 0.0226  D 2.2121  Aux 0.6734  GAux 0.8064  R1 0.0000
+  step    3500  G 0.0295  D 2.2249  Aux 0.6807  GAux 0.8073  R1 0.0000
+  diag step    3500  Dreal 0.4061  Dfake -0.1448  Dwrong -2.3378  gap 2.7439  cls_acc 0.875  feat_std 0.436759  ema_div 0.1136  fake_std 0.1502  fake_min -0.4922  fake_max 0.4395
+[epoch 008] 41.4s
+  step    3600  G 0.0212  D 2.1878  Aux 0.6495  GAux 0.7812  R1 0.0000
+  step    3700  G 0.0250  D 2.2021  Aux 0.6659  GAux 0.7946  R1 0.0000
+  step    3800  G 0.0325  D 2.1898  Aux 0.6582  GAux 0.8006  R1 0.0000
+  step    3900  G 0.0263  D 2.1792  Aux 0.6469  GAux 0.7945  R1 0.0000
+[epoch 009] 41.3s
+  step    4000  G 0.0222  D 2.1680  Aux 0.6341  GAux 0.7729  R1 0.0000
+  diag step    4000  Dreal 0.7445  Dfake -0.1610  Dwrong -2.2600  gap 3.0045  cls_acc 0.875  feat_std 0.460951  ema_div 0.1245  fake_std 0.1519  fake_min -0.4707  fake_max 0.4980
+  step    4100  G 0.0314  D 2.1746  Aux 0.6318  GAux 0.7719  R1 0.0000
+  step    4200  G 0.0279  D 2.1642  Aux 0.6287  GAux 0.7602  R1 0.0000
+[epoch 010] 41.6s
+  step    4300  G 0.0339  D 2.1340  Aux 0.6086  GAux 0.7481  R1 0.0000
+  step    4400  G 0.0259  D 2.1269  Aux 0.5952  GAux 0.7390  R1 0.0000
+  step    4500  G 0.0305  D 2.1387  Aux 0.6049  GAux 0.7474  R1 0.0000
+  diag step    4500  Dreal 0.5845  Dfake -0.0705  Dwrong -2.8251  gap 3.4097  cls_acc 0.906  feat_std 0.455055  ema_div 0.1285  fake_std 0.1781  fake_min -0.5117  fake_max 0.4863
+  step    4600  G 0.0344  D 2.1198  Aux 0.5931  GAux 0.7358  R1 0.0000
+[epoch 011] 40.5s
+  step    4700  G 0.0406  D 2.1249  Aux 0.6004  GAux 0.7642  R1 0.0000
+  step    4800  G 0.0187  D 2.0851  Aux 0.5697  GAux 0.7230  R1 0.0000
+  step    4900  G 0.0413  D 2.1286  Aux 0.5974  GAux 0.7363  R1 0.0000
+  step    5000  G 0.0302  D 2.1024  Aux 0.5773  GAux 0.7324  R1 0.0000
+  diag step    5000  Dreal 0.4856  Dfake -0.1663  Dwrong -3.0214  gap 3.5069  cls_acc 0.891  feat_std 0.487792  ema_div 0.1483  fake_std 0.1561  fake_min -0.5312  fake_max 0.4961
+[epoch 012] 39.9s
+  step    5100  G 0.0276  D 2.0827  Aux 0.5699  GAux 0.7312  R1 0.0000
+  step    5200  G 0.0299  D 2.0870  Aux 0.5640  GAux 0.7217  R1 0.0000
+  step    5300  G 0.0336  D 2.0960  Aux 0.5686  GAux 0.7060  R1 0.0000
+  step    5400  G 0.0329  D 2.0778  Aux 0.5577  GAux 0.7143  R1 0.0000
+[epoch 013] 40.5s
+  step    5500  G 0.0340  D 2.0704  Aux 0.5502  GAux 0.6981  R1 0.0000
+  diag step    5500  Dreal 0.5745  Dfake -0.1259  Dwrong -2.7093  gap 3.2838  cls_acc 0.891  feat_std 0.507233  ema_div 0.1465  fake_std 0.1649  fake_min -0.5586  fake_max 0.4824
+  step    5600  G 0.0377  D 2.0447  Aux 0.5341  GAux 0.7142  R1 0.0000
+  step    5700  G 0.0347  D 2.0611  Aux 0.5439  GAux 0.6994  R1 0.0000
+  step    5800  G 0.0358  D 2.0647  Aux 0.5437  GAux 0.6838  R1 0.0000
+[epoch 014] 40.7s
+  step    5900  G 0.0302  D 2.0432  Aux 0.5304  GAux 0.6900  R1 0.0000
+  step    6000  G 0.0344  D 2.0416  Aux 0.5306  GAux 0.6905  R1 0.0000
+  diag step    6000  Dreal 0.7858  Dfake -0.0332  Dwrong -3.0954  gap 3.8813  cls_acc 0.875  feat_std 0.489954  ema_div 0.1466  fake_std 0.1803  fake_min -0.5586  fake_max 0.5312
+  step    6100  G 0.0330  D 2.0332  Aux 0.5213  GAux 0.6820  R1 0.0000
+  step    6200  G 0.0324  D 2.0383  Aux 0.5204  GAux 0.6952  R1 0.0000
+[epoch 015] 41.5s
+  step    6300  G 0.0454  D 2.0245  Aux 0.5251  GAux 0.6911  R1 0.0000
+  step    6400  G 0.0374  D 2.0217  Aux 0.5162  GAux 0.6883  R1 0.0000
+  step    6500  G 0.0315  D 2.0246  Aux 0.5122  GAux 0.6785  R1 0.0000
+  diag step    6500  Dreal 0.6081  Dfake -0.0214  Dwrong -3.3771  gap 3.9852  cls_acc 0.875  feat_std 0.547395  ema_div 0.1413  fake_std 0.1979  fake_min -0.5977  fake_max 0.5195
+  step    6600  G 0.0438  D 2.0193  Aux 0.5047  GAux 0.6762  R1 0.0000
+[epoch 016] 41.2s
+  step    6700  G 0.0393  D 1.9965  Aux 0.4949  GAux 0.6794  R1 0.0000
+  step    6800  G 0.0338  D 1.9880  Aux 0.4921  GAux 0.6857  R1 0.0000
+  step    6900  G 0.0325  D 1.9939  Aux 0.4960  GAux 0.6752  R1 0.0000
+  step    7000  G 0.0395  D 1.9922  Aux 0.4910  GAux 0.6775  R1 0.0000
+  diag step    7000  Dreal 1.0885  Dfake 0.0690  Dwrong -2.8217  gap 3.9102  cls_acc 0.891  feat_std 0.501699  ema_div 0.1458  fake_std 0.1829  fake_min -0.5977  fake_max 0.5430
+[epoch 017] 41.5s
+  step    7100  G 0.0280  D 1.9751  Aux 0.4819  GAux 0.6786  R1 0.0000
+  step    7200  G 0.0324  D 1.9701  Aux 0.4725  GAux 0.6601  R1 0.0000
+  step    7300  G 0.0370  D 1.9755  Aux 0.4802  GAux 0.6584  R1 0.0000
+  step    7400  G 0.0397  D 1.9856  Aux 0.4839  GAux 0.6564  R1 0.0000
+[epoch 018] 42.6s
+  step    7500  G 0.0434  D 1.9567  Aux 0.4678  GAux 0.6658  R1 0.0000
+  diag step    7500  Dreal 0.9283  Dfake -0.0452  Dwrong -3.4669  gap 4.3952  cls_acc 0.953  feat_std 0.578900  ema_div 0.1471  fake_std 0.1746  fake_min -0.5977  fake_max 0.5547
+  step    7600  G 0.0344  D 1.9536  Aux 0.4640  GAux 0.6553  R1 0.0000
+  step    7700  G 0.0402  D 1.9678  Aux 0.4702  GAux 0.6506  R1 0.0000
+  step    7800  G 0.0343  D 1.9669  Aux 0.4691  GAux 0.6494  R1 0.0000
+[epoch 019] 41.5s
+  step    7900  G 0.0377  D 1.9340  Aux 0.4506  GAux 0.6569  R1 0.0000
+  step    8000  G 0.0380  D 1.9573  Aux 0.4676  GAux 0.6776  R1 0.0000
+  diag step    8000  Dreal 0.7838  Dfake -0.0951  Dwrong -2.7646  gap 3.5484  cls_acc 0.906  feat_std 0.546973  ema_div 0.1494  fake_std 0.1891  fake_min -0.5781  fake_max 0.4805
+  step    8100  G 0.0369  D 1.9499  Aux 0.4578  GAux 0.6443  R1 0.0000
+[epoch 020] 40.2s
+  step    8200  G 0.0360  D 1.9293  Aux 0.4423  GAux 0.6471  R1 0.0000
+  step    8300  G 0.0356  D 1.9390  Aux 0.4547  GAux 0.6572  R1 0.0000
+  step    8400  G 0.0371  D 1.9219  Aux 0.4385  GAux 0.6412  R1 0.0000
+  step    8500  G 0.0333  D 1.9321  Aux 0.4391  GAux 0.6579  R1 0.0000
+  diag step    8500  Dreal 0.9620  Dfake 0.0231  Dwrong -3.3084  gap 4.2705  cls_acc 0.938  feat_std 0.584660  ema_div 0.1605  fake_std 0.1859  fake_min -0.6016  fake_max 0.5312
+[epoch 021] 41.9s
+  step    8600  G 0.0333  D 1.9284  Aux 0.4420  GAux 0.6435  R1 0.0000
+  step    8700  G 0.0376  D 1.9134  Aux 0.4328  GAux 0.6399  R1 0.0000
+  step    8800  G 0.0423  D 1.9243  Aux 0.4382  GAux 0.6401  R1 0.0000
+  step    8900  G 0.0393  D 1.9134  Aux 0.4293  GAux 0.6482  R1 0.0000
+[epoch 022] 43.1s
+  step    9000  G 0.0329  D 1.9228  Aux 0.4357  GAux 0.6352  R1 0.0000
+  diag step    9000  Dreal 0.7869  Dfake -0.1060  Dwrong -3.4073  gap 4.1942  cls_acc 0.969  feat_std 0.575794  ema_div 0.1480  fake_std 0.1876  fake_min -0.5977  fake_max 0.5391
+  step    9100  G 0.0388  D 1.9120  Aux 0.4266  GAux 0.6547  R1 0.0000
+  step    9200  G 0.0321  D 1.9101  Aux 0.4244  GAux 0.6309  R1 0.0000
+  step    9300  G 0.0387  D 1.9083  Aux 0.4315  GAux 0.6339  R1 0.0000
+[epoch 023] 41.0s
+  step    9400  G 0.0303  D 1.8953  Aux 0.4123  GAux 0.6291  R1 0.0000
+  step    9500  G 0.0408  D 1.9031  Aux 0.4212  GAux 0.6349  R1 0.0000
+  diag step    9500  Dreal 0.5250  Dfake -0.1123  Dwrong -3.7394  gap 4.2645  cls_acc 0.969  feat_std 0.614707  ema_div 0.1517  fake_std 0.1895  fake_min -0.6250  fake_max 0.5430
+  step    9600  G 0.0399  D 1.8914  Aux 0.4132  GAux 0.6343  R1 0.0000
+  step    9700  G 0.0399  D 1.8858  Aux 0.4111  GAux 0.6147  R1 0.0000
+[epoch 024] 41.1s
+  step    9800  G 0.0384  D 1.8844  Aux 0.4137  GAux 0.6326  R1 0.0000
+  step    9900  G 0.0354  D 1.8644  Aux 0.3904  GAux 0.6205  R1 0.0000
+  step   10000  G 0.0357  D 1.8931  Aux 0.4167  GAux 0.6444  R1 0.0000
+  diag step   10000  Dreal 1.2189  Dfake 0.0782  Dwrong -2.8782  gap 4.0971  cls_acc 0.938  feat_std 0.591517  ema_div 0.1532  fake_std 0.1958  fake_min -0.5430  fake_max 0.5117
+  step   10100  G 0.0336  D 1.8818  Aux 0.4059  GAux 0.6260  R1 0.0000
+[epoch 025] 41.3s
+  step   10200  G 0.0444  D 1.8596  Aux 0.3938  GAux 0.6146  R1 0.0000
+  step   10300  G 0.0329  D 1.8494  Aux 0.3848  GAux 0.6180  R1 0.0000
+  step   10400  G 0.0440  D 1.8773  Aux 0.4093  GAux 0.6316  R1 0.0000
+  step   10500  G 0.0266  D 1.8730  Aux 0.3938  GAux 0.6099  R1 0.0000
+  diag step   10500  Dreal 0.5949  Dfake -0.1581  Dwrong -2.9568  gap 3.5517  cls_acc 0.891  feat_std 0.564312  ema_div 0.1680  fake_std 0.1861  fake_min -0.5273  fake_max 0.5664
+[epoch 026] 41.8s
+  step   10600  G 0.0420  D 1.8569  Aux 0.3943  GAux 0.6114  R1 0.0000
+  step   10700  G 0.0410  D 1.8529  Aux 0.3846  GAux 0.6248  R1 0.0000
+  step   10800  G 0.0397  D 1.8459  Aux 0.3813  GAux 0.6117  R1 0.0000
+  step   10900  G 0.0276  D 1.8666  Aux 0.3961  GAux 0.6219  R1 0.0000
+[epoch 027] 43.9s
+  step   11000  G 0.0394  D 1.8305  Aux 0.3675  GAux 0.6082  R1 0.0000
+  diag step   11000  Dreal 1.1779  Dfake -0.0053  Dwrong -2.7764  gap 3.9543  cls_acc 0.875  feat_std 0.599233  ema_div 0.1576  fake_std 0.1884  fake_min -0.6250  fake_max 0.6367
+  step   11100  G 0.0399  D 1.8393  Aux 0.3745  GAux 0.6083  R1 0.0000
+  step   11200  G 0.0340  D 1.8362  Aux 0.3704  GAux 0.5948  R1 0.0000
+  step   11300  G 0.0396  D 1.8619  Aux 0.3967  GAux 0.6187  R1 0.0000
+[epoch 028] 41.7s
+  step   11400  G 0.0347  D 1.8223  Aux 0.3680  GAux 0.6070  R1 0.0000
+  step   11500  G 0.0449  D 1.8314  Aux 0.3722  GAux 0.5961  R1 0.0000
+  diag step   11500  Dreal 0.5212  Dfake -0.1293  Dwrong -3.1352  gap 3.6564  cls_acc 0.953  feat_std 0.598578  ema_div 0.1566  fake_std 0.2016  fake_min -0.5781  fake_max 0.7031
+  step   11600  G 0.0346  D 1.8325  Aux 0.3753  GAux 0.6129  R1 0.0000
+  step   11700  G 0.0395  D 1.8397  Aux 0.3755  GAux 0.6087  R1 0.0000
+[epoch 029] 41.0s
+  step   11800  G 0.0419  D 1.8103  Aux 0.3599  GAux 0.6100  R1 0.0000
+  step   11900  G 0.0415  D 1.8018  Aux 0.3594  GAux 0.6172  R1 0.0000
+  step   12000  G 0.0430  D 1.8316  Aux 0.3724  GAux 0.6131  R1 0.0000
+  diag step   12000  Dreal 1.1178  Dfake 0.0068  Dwrong -3.3569  gap 4.4747  cls_acc 0.922  feat_std 0.638633  ema_div 0.1566  fake_std 0.1715  fake_min -0.5508  fake_max 0.5977
+[epoch 030] 41.9s
+  step   12100  G 0.0384  D 1.8281  Aux 0.3666  GAux 0.6003  R1 0.0000
+  step   12200  G 0.0407  D 1.7871  Aux 0.3466  GAux 0.6126  R1 0.0000
+  step   12300  G 0.0336  D 1.8134  Aux 0.3602  GAux 0.6024  R1 0.0000
+  step   12400  G 0.0405  D 1.8124  Aux 0.3643  GAux 0.6200  R1 0.0000
+[epoch 031] 40.7s
+  step   12500  G 0.0392  D 1.8048  Aux 0.3556  GAux 0.6099  R1 0.0000
+  diag step   12500  Dreal 1.0219  Dfake 0.0315  Dwrong -3.0411  gap 4.0630  cls_acc 0.969  feat_std 0.620677  ema_div 0.1634  fake_std 0.1882  fake_min -0.6250  fake_max 0.5078
+  step   12600  G 0.0366  D 1.7867  Aux 0.3369  GAux 0.5916  R1 0.0000
+  step   12700  G 0.0312  D 1.8083  Aux 0.3476  GAux 0.5906  R1 0.0000
+  step   12800  G 0.0429  D 1.8036  Aux 0.3530  GAux 0.5896  R1 0.0000
+[epoch 032] 41.0s
+  step   12900  G 0.0352  D 1.8048  Aux 0.3509  GAux 0.5967  R1 0.0000
+  step   13000  G 0.0421  D 1.7872  Aux 0.3439  GAux 0.6048  R1 0.0000
+  diag step   13000  Dreal 1.0506  Dfake -0.0081  Dwrong -2.9491  gap 3.9997  cls_acc 0.938  feat_std 0.629261  ema_div 0.1580  fake_std 0.1904  fake_min -0.5977  fake_max 0.5078
+  step   13100  G 0.0392  D 1.7812  Aux 0.3410  GAux 0.6058  R1 0.0000
+  step   13200  G 0.0361  D 1.7916  Aux 0.3430  GAux 0.5963  R1 0.0000
+[epoch 033] 39.6s
+  step   13300  G 0.0448  D 1.7722  Aux 0.3342  GAux 0.6250  R1 0.0000
+  step   13400  G 0.0430  D 1.7611  Aux 0.3298  GAux 0.6195  R1 0.0000
+  step   13500  G 0.0328  D 1.7720  Aux 0.3337  GAux 0.5980  R1 0.0000
+  diag step   13500  Dreal 1.1527  Dfake 0.0610  Dwrong -3.1602  gap 4.3128  cls_acc 0.953  feat_std 0.619063  ema_div 0.1593  fake_std 0.1758  fake_min -0.5391  fake_max 0.5156
+  step   13600  G 0.0384  D 1.7865  Aux 0.3439  GAux 0.6067  R1 0.0000
+[epoch 034] 42.0s
+  step   13700  G 0.0457  D 1.7590  Aux 0.3183  GAux 0.5852  R1 0.0000
+  step   13800  G 0.0368  D 1.7557  Aux 0.3301  GAux 0.5893  R1 0.0000
+  step   13900  G 0.0362  D 1.7643  Aux 0.3268  GAux 0.5979  R1 0.0000
+  step   14000  G 0.0384  D 1.7711  Aux 0.3318  GAux 0.5958  R1 0.0000
+  diag step   14000  Dreal 0.9782  Dfake -0.1077  Dwrong -3.1115  gap 4.0896  cls_acc 0.875  feat_std 0.664398  ema_div 0.1557  fake_std 0.1902  fake_min -0.5469  fake_max 0.6680
+[epoch 035] 42.2s
+  step   14100  G 0.0415  D 1.7585  Aux 0.3287  GAux 0.6066  R1 0.0000
+  step   14200  G 0.0295  D 1.7440  Aux 0.3053  GAux 0.5782  R1 0.0000
+  step   14300  G 0.0412  D 1.7473  Aux 0.3247  GAux 0.6105  R1 0.0000
+  step   14400  G 0.0406  D 1.7614  Aux 0.3256  GAux 0.6047  R1 0.0000
+[epoch 036] 43.8s
+  step   14500  G 0.0394  D 1.7459  Aux 0.3160  GAux 0.5866  R1 0.0000
+  diag step   14500  Dreal 1.0334  Dfake -0.0739  Dwrong -3.1614  gap 4.1947  cls_acc 0.875  feat_std 0.666519  ema_div 0.1534  fake_std 0.1810  fake_min -0.5742  fake_max 0.5820
+  step   14600  G 0.0411  D 1.7472  Aux 0.3177  GAux 0.5968  R1 0.0000
+  step   14700  G 0.0451  D 1.7472  Aux 0.3162  GAux 0.5941  R1 0.0000
+  step   14800  G 0.0332  D 1.7433  Aux 0.3154  GAux 0.5990  R1 0.0000
+[epoch 037] 40.4s
+  step   14900  G 0.0412  D 1.7431  Aux 0.3131  GAux 0.6008  R1 0.0000
+  step   15000  G 0.0362  D 1.7330  Aux 0.3095  GAux 0.6028  R1 0.0000
+  diag step   15000  Dreal 0.8038  Dfake -0.0852  Dwrong -3.2296  gap 4.0334  cls_acc 0.984  feat_std 0.694874  ema_div 0.1509  fake_std 0.1716  fake_min -0.4961  fake_max 0.5000
+  step   15100  G 0.0400  D 1.7381  Aux 0.3113  GAux 0.5958  R1 0.0000
+  step   15200  G 0.0386  D 1.7443  Aux 0.3124  GAux 0.5900  R1 0.0000
+[epoch 038] 39.6s
+  step   15300  G 0.0401  D 1.7218  Aux 0.2983  GAux 0.5870  R1 0.0000
+  step   15400  G 0.0374  D 1.7329  Aux 0.3071  GAux 0.5932  R1 0.0000
+  step   15500  G 0.0378  D 1.7306  Aux 0.3051  GAux 0.5870  R1 0.0000
+  diag step   15500  Dreal 0.6998  Dfake -0.1611  Dwrong -3.7310  gap 4.4308  cls_acc 0.938  feat_std 0.674091  ema_div 0.1584  fake_std 0.1785  fake_min -0.5664  fake_max 0.4805
+  step   15600  G 0.0349  D 1.7407  Aux 0.3140  GAux 0.5904  R1 0.0000
+[epoch 039] 39.2s
+  step   15700  G 0.0414  D 1.7158  Aux 0.2949  GAux 0.5860  R1 0.0000
+  step   15800  G 0.0474  D 1.7046  Aux 0.2908  GAux 0.5912  R1 0.0000
+  step   15900  G 0.0379  D 1.7236  Aux 0.2961  GAux 0.5958  R1 0.0000
+[epoch 040] 40.1s
+  step   16000  G 0.0373  D 1.7318  Aux 0.3050  GAux 0.5945  R1 0.0000
+  diag step   16000  Dreal 1.1137  Dfake 0.0888  Dwrong -3.9436  gap 5.0574  cls_acc 0.984  feat_std 0.673764  ema_div 0.1532  fake_std 0.1799  fake_min -0.5273  fake_max 0.4551
+  step   16100  G 0.0337  D 1.6996  Aux 0.2903  GAux 0.5920  R1 0.0000
+  step   16200  G 0.0358  D 1.7232  Aux 0.2961  GAux 0.5823  R1 0.0000
+  step   16300  G 0.0349  D 1.7179  Aux 0.2972  GAux 0.5816  R1 0.0000
+[epoch 041] 40.6s
+  step   16400  G 0.0371  D 1.7195  Aux 0.2939  GAux 0.5728  R1 0.0000
+  step   16500  G 0.0450  D 1.6964  Aux 0.2824  GAux 0.5860  R1 0.0000
+  diag step   16500  Dreal 1.0760  Dfake -0.0120  Dwrong -3.5110  gap 4.5870  cls_acc 1.000  feat_std 0.683885  ema_div 0.1496  fake_std 0.1707  fake_min -0.5312  fake_max 0.5430
+  step   16600  G 0.0360  D 1.7025  Aux 0.2820  GAux 0.5800  R1 0.0000
+  step   16700  G 0.0426  D 1.7145  Aux 0.3021  GAux 0.5980  R1 0.0000
+[epoch 042] 43.0s
+  step   16800  G 0.0358  D 1.6914  Aux 0.2852  GAux 0.5955  R1 0.0000
+  step   16900  G 0.0401  D 1.6843  Aux 0.2793  GAux 0.6028  R1 0.0000
+  step   17000  G 0.0361  D 1.7008  Aux 0.2920  GAux 0.6069  R1 0.0000
+  diag step   17000  Dreal 0.9419  Dfake 0.0252  Dwrong -4.2107  gap 5.1526  cls_acc 0.984  feat_std 0.713194  ema_div 0.1509  fake_std 0.1946  fake_min -0.5391  fake_max 0.6133
+  step   17100  G 0.0393  D 1.6978  Aux 0.2860  GAux 0.5922  R1 0.0000
+[epoch 043] 41.3s
+  step   17200  G 0.0447  D 1.6802  Aux 0.2768  GAux 0.5931  R1 0.0000
+  step   17300  G 0.0426  D 1.6596  Aux 0.2599  GAux 0.5912  R1 0.0000
+  step   17400  G 0.0419  D 1.6797  Aux 0.2812  GAux 0.6012  R1 0.0000
+  step   17500  G 0.0356  D 1.6918  Aux 0.2839  GAux 0.6164  R1 0.0000
+  diag step   17500  Dreal 0.8604  Dfake -0.0993  Dwrong -3.3589  gap 4.2194  cls_acc 0.953  feat_std 0.692741  ema_div 0.1400  fake_std 0.1608  fake_min -0.5586  fake_max 0.5391
+[epoch 044] 40.7s
+  step   17600  G 0.0452  D 1.6814  Aux 0.2790  GAux 0.5970  R1 0.0000
+  step   17700  G 0.0369  D 1.6720  Aux 0.2700  GAux 0.5906  R1 0.0000
+  step   17800  G 0.0446  D 1.6703  Aux 0.2747  GAux 0.6085  R1 0.0000
+  step   17900  G 0.0360  D 1.6833  Aux 0.2779  GAux 0.6080  R1 0.0000
+[epoch 045] 41.1s
+  step   18000  G 0.0470  D 1.6572  Aux 0.2656  GAux 0.6109  R1 0.0000
+  diag step   18000  Dreal 0.8996  Dfake -0.1056  Dwrong -3.0870  gap 3.9866  cls_acc 0.969  feat_std 0.744887  ema_div 0.1479  fake_std 0.1745  fake_min -0.5273  fake_max 0.7266
+  step   18100  G 0.0396  D 1.6601  Aux 0.2706  GAux 0.6122  R1 0.0000
+  step   18200  G 0.0345  D 1.6671  Aux 0.2648  GAux 0.5960  R1 0.0000
+  step   18300  G 0.0350  D 1.6681  Aux 0.2694  GAux 0.5952  R1 0.0000
+[epoch 046] 41.5s
+  step   18400  G 0.0362  D 1.6629  Aux 0.2613  GAux 0.5901  R1 0.0000
+  step   18500  G 0.0422  D 1.6510  Aux 0.2624  GAux 0.6081  R1 0.0000
+  diag step   18500  Dreal 0.9255  Dfake -0.0159  Dwrong -3.4756  gap 4.4010  cls_acc 0.969  feat_std 0.730321  ema_div 0.1429  fake_std 0.1599  fake_min -0.6055  fake_max 0.4961
+  step   18600  G 0.0355  D 1.6611  Aux 0.2612  GAux 0.5976  R1 0.0000
+  step   18700  G 0.0368  D 1.6650  Aux 0.2686  GAux 0.5872  R1 0.0000
+[epoch 047] 41.1s
+  step   18800  G 0.0399  D 1.6390  Aux 0.2511  GAux 0.5941  R1 0.0000
+  step   18900  G 0.0456  D 1.6495  Aux 0.2598  GAux 0.6121  R1 0.0000
+  step   19000  G 0.0410  D 1.6477  Aux 0.2588  GAux 0.5865  R1 0.0000
+  diag step   19000  Dreal 1.2414  Dfake 0.0898  Dwrong -3.8400  gap 5.0814  cls_acc 1.000  feat_std 0.721626  ema_div 0.1426  fake_std 0.1663  fake_min -0.5586  fake_max 0.5508
+  step   19100  G 0.0335  D 1.6572  Aux 0.2631  GAux 0.5839  R1 0.0000
+[epoch 048] 41.7s
+  step   19200  G 0.0463  D 1.6377  Aux 0.2508  GAux 0.5887  R1 0.0000
+  step   19300  G 0.0374  D 1.6374  Aux 0.2520  GAux 0.5999  R1 0.0000
+  step   19400  G 0.0443  D 1.6452  Aux 0.2631  GAux 0.6144  R1 0.0000
+  step   19500  G 0.0372  D 1.6520  Aux 0.2559  GAux 0.6015  R1 0.0000
+  diag step   19500  Dreal 0.8462  Dfake -0.0463  Dwrong -3.7936  gap 4.6398  cls_acc 0.969  feat_std 0.742165  ema_div 0.1479  fake_std 0.1732  fake_min -0.6250  fake_max 0.5391
+[epoch 049] 42.2s
+  step   19600  G 0.0444  D 1.6257  Aux 0.2466  GAux 0.6065  R1 0.0000
+  step   19700  G 0.0391  D 1.6387  Aux 0.2499  GAux 0.5829  R1 0.0000
+  step   19800  G 0.0378  D 1.6436  Aux 0.2586  GAux 0.6004  R1 0.0000
+[epoch 050] 40.8s
+  step   19900  G 0.0421  D 1.6337  Aux 0.2490  GAux 0.6044  R1 0.0000
+  step   20000  G 0.0425  D 1.6217  Aux 0.2471  GAux 0.6111  R1 0.0000
+  diag step   20000  Dreal 1.0829  Dfake -0.0279  Dwrong -3.7204  gap 4.8033  cls_acc 0.984  feat_std 0.758577  ema_div 0.1357  fake_std 0.1574  fake_min -0.4648  fake_max 0.5547
+  step   20100  G 0.0390  D 1.6187  Aux 0.2433  GAux 0.6095  R1 0.0000
+  step   20200  G 0.0380  D 1.6349  Aux 0.2497  GAux 0.6045  R1 0.0000
+[epoch 051] 42.5s
+  step   20300  G 0.0334  D 1.6390  Aux 0.2503  GAux 0.5969  R1 0.0000
+  step   20400  G 0.0416  D 1.6188  Aux 0.2371  GAux 0.5935  R1 0.0000
+  step   20500  G 0.0329  D 1.6099  Aux 0.2321  GAux 0.6124  R1 0.0000
+  diag step   20500  Dreal 1.3068  Dfake 0.0515  Dwrong -3.8765  gap 5.1833  cls_acc 0.953  feat_std 0.800714  ema_div 0.1390  fake_std 0.1733  fake_min -0.5391  fake_max 0.4707
+  step   20600  G 0.0427  D 1.6275  Aux 0.2512  GAux 0.6020  R1 0.0000
+[epoch 052] 42.9s
+  step   20700  G 0.0476  D 1.6213  Aux 0.2444  GAux 0.6126  R1 0.0000
+  step   20800  G 0.0352  D 1.6052  Aux 0.2320  GAux 0.5958  R1 0.0000
+  step   20900  G 0.0309  D 1.6162  Aux 0.2354  GAux 0.6054  R1 0.0000
+  step   21000  G 0.0429  D 1.6128  Aux 0.2368  GAux 0.5950  R1 0.0000
+  diag step   21000  Dreal 0.9378  Dfake -0.0316  Dwrong -3.8513  gap 4.7891  cls_acc 0.922  feat_std 0.752937  ema_div 0.1406  fake_std 0.1555  fake_min -0.4902  fake_max 0.5508
+[epoch 053] 41.8s
+  step   21100  G 0.0424  D 1.6139  Aux 0.2374  GAux 0.5989  R1 0.0000
+  step   21200  G 0.0384  D 1.5973  Aux 0.2292  GAux 0.6090  R1 0.0000
+  step   21300  G 0.0371  D 1.6128  Aux 0.2400  GAux 0.6000  R1 0.0000
+  step   21400  G 0.0338  D 1.6208  Aux 0.2378  GAux 0.5966  R1 0.0000
+[epoch 054] 41.9s
+  step   21500  G 0.0366  D 1.6085  Aux 0.2271  GAux 0.5824  R1 0.0000
+  diag step   21500  Dreal 1.0419  Dfake -0.0148  Dwrong -3.4956  gap 4.5374  cls_acc 0.969  feat_std 0.735731  ema_div 0.1448  fake_std 0.1715  fake_min -0.5156  fake_max 0.4863
+  step   21600  G 0.0381  D 1.5966  Aux 0.2257  GAux 0.5932  R1 0.0000
+  step   21700  G 0.0452  D 1.6074  Aux 0.2335  GAux 0.5861  R1 0.0000
+  step   21800  G 0.0376  D 1.6092  Aux 0.2373  GAux 0.6052  R1 0.0000
+[epoch 055] 41.0s
+  step   21900  G 0.0402  D 1.5989  Aux 0.2317  GAux 0.6031  R1 0.0000
+  step   22000  G 0.0392  D 1.5949  Aux 0.2281  GAux 0.5960  R1 0.0000
+  diag step   22000  Dreal 1.4491  Dfake 0.0038  Dwrong -3.0962  gap 4.5454  cls_acc 1.000  feat_std 0.810782  ema_div 0.1345  fake_std 0.1675  fake_min -0.5391  fake_max 0.4551
+  step   22100  G 0.0356  D 1.5982  Aux 0.2282  GAux 0.5893  R1 0.0000
+  step   22200  G 0.0443  D 1.6034  Aux 0.2268  GAux 0.5969  R1 0.0000
+[epoch 056] 40.3s
+  step   22300  G 0.0476  D 1.5874  Aux 0.2204  GAux 0.5983  R1 0.0000
+  step   22400  G 0.0380  D 1.5888  Aux 0.2180  GAux 0.6009  R1 0.0000
+  step   22500  G 0.0407  D 1.5925  Aux 0.2227  GAux 0.5967  R1 0.0000
+  diag step   22500  Dreal 1.1713  Dfake -0.0646  Dwrong -3.9811  gap 5.1524  cls_acc 1.000  feat_std 0.839818  ema_div 0.1439  fake_std 0.1679  fake_min -0.5586  fake_max 0.5078
+  step   22600  G 0.0376  D 1.6060  Aux 0.2309  GAux 0.5987  R1 0.0000
+[epoch 057] 39.8s
+  step   22700  G 0.0472  D 1.5797  Aux 0.2210  GAux 0.6148  R1 0.0000
+  step   22800  G 0.0417  D 1.5726  Aux 0.2159  GAux 0.6165  R1 0.0000
+  step   22900  G 0.0329  D 1.5926  Aux 0.2259  GAux 0.5995  R1 0.0000
+  step   23000  G 0.0356  D 1.5913  Aux 0.2220  GAux 0.5899  R1 0.0000
+  diag step   23000  Dreal 1.2502  Dfake -0.0112  Dwrong -3.7839  gap 5.0341  cls_acc 0.969  feat_std 0.797646  ema_div 0.1265  fake_std 0.1613  fake_min -0.4707  fake_max 0.5430
+[epoch 058] 40.6s
+  step   23100  G 0.0473  D 1.5632  Aux 0.2119  GAux 0.6034  R1 0.0000
+  step   23200  G 0.0385  D 1.5772  Aux 0.2152  GAux 0.6085  R1 0.0000
+  step   23300  G 0.0394  D 1.5718  Aux 0.2147  GAux 0.5988  R1 0.0000
+  step   23400  G 0.0381  D 1.5865  Aux 0.2248  GAux 0.6060  R1 0.0000
+[epoch 059] 47.1s
+  step   23500  G 0.0375  D 1.5550  Aux 0.2034  GAux 0.5982  R1 0.0000
+  diag step   23500  Dreal 1.2031  Dfake -0.0196  Dwrong -4.2026  gap 5.4057  cls_acc 0.969  feat_std 0.842328  ema_div 0.1417  fake_std 0.1594  fake_min -0.6211  fake_max 0.6719
+  step   23600  G 0.0439  D 1.5724  Aux 0.2108  GAux 0.6021  R1 0.0000
+  step   23700  G 0.0398  D 1.5747  Aux 0.2138  GAux 0.6109  R1 0.0000
+[epoch 060] 42.9s
+  step   23800  G 0.0393  D 1.5799  Aux 0.2227  GAux 0.6363  R1 0.0000
+  step   23900  G 0.0441  D 1.5529  Aux 0.2039  GAux 0.6042  R1 0.0000
+  step   24000  G 0.0369  D 1.5603  Aux 0.2098  GAux 0.6102  R1 0.0000
+  diag step   24000  Dreal 1.0891  Dfake -0.0540  Dwrong -4.1013  gap 5.1904  cls_acc 0.984  feat_std 0.838134  ema_div 0.1325  fake_std 0.1543  fake_min -0.4453  fake_max 0.4609
+  step   24100  G 0.0386  D 1.5685  Aux 0.2134  GAux 0.6056  R1 0.0000
+[epoch 061] 40.6s
+  step   24200  G 0.0315  D 1.5766  Aux 0.2177  GAux 0.6034  R1 0.0000
+  step   24300  G 0.0478  D 1.5541  Aux 0.2037  GAux 0.6013  R1 0.0000
+  step   24400  G 0.0393  D 1.5605  Aux 0.2067  GAux 0.6101  R1 0.0000
+  step   24500  G 0.0367  D 1.5584  Aux 0.2061  GAux 0.5968  R1 0.0000
+  diag step   24500  Dreal 1.3228  Dfake -0.0004  Dwrong -4.0719  gap 5.3947  cls_acc 0.984  feat_std 0.827249  ema_div 0.1342  fake_std 0.1524  fake_min -0.4902  fake_max 0.4531
+[epoch 062] 40.9s
+  step   24600  G 0.0365  D 1.5604  Aux 0.2047  GAux 0.5893  R1 0.0000
+  step   24700  G 0.0467  D 1.5419  Aux 0.1996  GAux 0.6079  R1 0.0000
+  step   24800  G 0.0400  D 1.5475  Aux 0.1999  GAux 0.6216  R1 0.0000
+  step   24900  G 0.0418  D 1.5477  Aux 0.2048  GAux 0.6263  R1 0.0000
+[epoch 063] 41.9s
+  step   25000  G 0.0347  D 1.5572  Aux 0.2067  GAux 0.6097  R1 0.0000
+  diag step   25000  Dreal 1.0007  Dfake 0.0337  Dwrong -4.2681  gap 5.2688  cls_acc 0.938  feat_std 0.871945  ema_div 0.1336  fake_std 0.1598  fake_min -0.5117  fake_max 0.5195
+  step   25100  G 0.0429  D 1.5387  Aux 0.1990  GAux 0.6008  R1 0.0000
+  step   25200  G 0.0441  D 1.5381  Aux 0.1971  GAux 0.6112  R1 0.0000
+  step   25300  G 0.0368  D 1.5518  Aux 0.2040  GAux 0.6113  R1 0.0000
+[epoch 064] 45.1s
+  step   25400  G 0.0470  D 1.5380  Aux 0.1954  GAux 0.6287  R1 0.0000
+  step   25500  G 0.0406  D 1.5354  Aux 0.1952  GAux 0.6236  R1 0.0000
+  diag step   25500  Dreal 1.2253  Dfake 0.0320  Dwrong -3.3886  gap 4.6139  cls_acc 0.984  feat_std 0.875655  ema_div 0.1286  fake_std 0.1616  fake_min -0.4473  fake_max 0.6445
+  step   25600  G 0.0385  D 1.5480  Aux 0.2013  GAux 0.6122  R1 0.0000
+  step   25700  G 0.0341  D 1.5446  Aux 0.1955  GAux 0.5918  R1 0.0000
+[epoch 065] 46.0s
+  step   25800  G 0.0449  D 1.5316  Aux 0.1939  GAux 0.6027  R1 0.0000
+  step   25900  G 0.0444  D 1.5197  Aux 0.1879  GAux 0.6088  R1 0.0000
+  step   26000  G 0.0348  D 1.5337  Aux 0.1968  GAux 0.6200  R1 0.0000
+  diag step   26000  Dreal 1.3387  Dfake 0.0434  Dwrong -3.7212  gap 5.0599  cls_acc 1.000  feat_std 0.827679  ema_div 0.1291  fake_std 0.1531  fake_min -0.4902  fake_max 0.4746
+  step   26100  G 0.0374  D 1.5390  Aux 0.1935  GAux 0.6032  R1 0.0000
+[epoch 066] 41.7s
+  step   26200  G 0.0448  D 1.5173  Aux 0.1864  GAux 0.6052  R1 0.0000
+  step   26300  G 0.0379  D 1.5223  Aux 0.1867  GAux 0.6152  R1 0.0000
+  step   26400  G 0.0414  D 1.5308  Aux 0.2023  GAux 0.6297  R1 0.0000
+  step   26500  G 0.0335  D 1.5388  Aux 0.1990  GAux 0.6140  R1 0.0000
+  diag step   26500  Dreal 1.3413  Dfake -0.0262  Dwrong -3.3794  gap 4.7207  cls_acc 0.969  feat_std 0.889066  ema_div 0.1320  fake_std 0.1544  fake_min -0.5742  fake_max 0.4629
+[epoch 067] 41.1s
+  step   26600  G 0.0485  D 1.5145  Aux 0.1803  GAux 0.6131  R1 0.0000
+  step   26700  G 0.0418  D 1.5123  Aux 0.1842  GAux 0.6176  R1 0.0000
+  step   26800  G 0.0381  D 1.5293  Aux 0.1924  GAux 0.6232  R1 0.0000
+  step   26900  G 0.0361  D 1.5329  Aux 0.1948  GAux 0.6293  R1 0.0000
+[epoch 068] 40.3s
+  step   27000  G 0.0445  D 1.5061  Aux 0.1810  GAux 0.6154  R1 0.0000
+  diag step   27000  Dreal 1.1092  Dfake -0.0415  Dwrong -4.5185  gap 5.6277  cls_acc 1.000  feat_std 0.942079  ema_div 0.1300  fake_std 0.1418  fake_min -0.5000  fake_max 0.4414
+  step   27100  G 0.0377  D 1.5180  Aux 0.1849  GAux 0.6208  R1 0.0000
+  step   27200  G 0.0389  D 1.5244  Aux 0.1914  GAux 0.6213  R1 0.0000
+  step   27300  G 0.0448  D 1.5153  Aux 0.1909  GAux 0.6378  R1 0.0000
+[epoch 069] 40.1s
+  step   27400  G 0.0478  D 1.5024  Aux 0.1738  GAux 0.6265  R1 0.0000
+  step   27500  G 0.0367  D 1.4984  Aux 0.1803  GAux 0.6331  R1 0.0000
+  diag step   27500  Dreal 1.1282  Dfake -0.0073  Dwrong -3.6010  gap 4.7292  cls_acc 0.969  feat_std 0.884857  ema_div 0.1315  fake_std 0.1460  fake_min -0.4453  fake_max 0.6016
+  step   27600  G 0.0349  D 1.5146  Aux 0.1860  GAux 0.6163  R1 0.0000
+[epoch 070] 40.9s
+  step   27700  G 0.0429  D 1.5208  Aux 0.1886  GAux 0.6168  R1 0.0000
+  step   27800  G 0.0440  D 1.4866  Aux 0.1719  GAux 0.6355  R1 0.0000
+  step   27900  G 0.0403  D 1.5028  Aux 0.1799  GAux 0.6291  R1 0.0000
+  step   28000  G 0.0382  D 1.5186  Aux 0.1852  GAux 0.6185  R1 0.0000
+  diag step   28000  Dreal 1.4214  Dfake 0.0194  Dwrong -3.6288  gap 5.0502  cls_acc 0.984  feat_std 0.955689  ema_div 0.1257  fake_std 0.1488  fake_min -0.4902  fake_max 0.4766
+[epoch 071] 41.2s
+  step   28100  G 0.0363  D 1.5138  Aux 0.1848  GAux 0.6109  R1 0.0000
+  step   28200  G 0.0363  D 1.4950  Aux 0.1689  GAux 0.5979  R1 0.0000
+  step   28300  G 0.0402  D 1.4917  Aux 0.1743  GAux 0.6169  R1 0.0000
+  step   28400  G 0.0384  D 1.5084  Aux 0.1790  GAux 0.6152  R1 0.0000
+[epoch 072] 41.0s
+  step   28500  G 0.0390  D 1.5023  Aux 0.1816  GAux 0.6128  R1 0.0000
+  diag step   28500  Dreal 1.3283  Dfake 0.0616  Dwrong -3.6093  gap 4.9375  cls_acc 0.984  feat_std 0.886701  ema_div 0.1282  fake_std 0.1527  fake_min -0.5078  fake_max 0.6562
+  step   28600  G 0.0483  D 1.4822  Aux 0.1724  GAux 0.6175  R1 0.0000
+  step   28700  G 0.0379  D 1.4996  Aux 0.1748  GAux 0.6316  R1 0.0000
+  step   28800  G 0.0393  D 1.5037  Aux 0.1802  GAux 0.6268  R1 0.0000
+[epoch 073] 40.2s
+  step   28900  G 0.0438  D 1.4919  Aux 0.1736  GAux 0.6246  R1 0.0000
+  step   29000  G 0.0413  D 1.4841  Aux 0.1708  GAux 0.6368  R1 0.0000
+  diag step   29000  Dreal 1.4550  Dfake -0.0096  Dwrong -4.1973  gap 5.6523  cls_acc 0.984  feat_std 0.954594  ema_div 0.1240  fake_std 0.1404  fake_min -0.4590  fake_max 0.4375
+  step   29100  G 0.0369  D 1.4911  Aux 0.1726  GAux 0.6265  R1 0.0000
+  step   29200  G 0.0380  D 1.5009  Aux 0.1764  GAux 0.6130  R1 0.0000
+[epoch 074] 40.7s
+  step   29300  G 0.0441  D 1.4810  Aux 0.1680  GAux 0.6418  R1 0.0000
+  step   29400  G 0.0401  D 1.4831  Aux 0.1656  GAux 0.6175  R1 0.0000
+  step   29500  G 0.0366  D 1.4832  Aux 0.1639  GAux 0.6233  R1 0.0000
+  diag step   29500  Dreal 1.2142  Dfake 0.0047  Dwrong -3.6443  gap 4.8585  cls_acc 0.953  feat_std 0.904596  ema_div 0.1312  fake_std 0.1456  fake_min -0.4141  fake_max 0.4434
+  step   29600  G 0.0390  D 1.4912  Aux 0.1728  GAux 0.6299  R1 0.0000
+[epoch 075] 41.4s
+  step   29700  G 0.0447  D 1.4811  Aux 0.1681  GAux 0.6353  R1 0.0000
+  step   29800  G 0.0372  D 1.4754  Aux 0.1658  GAux 0.6379  R1 0.0000
+  step   29900  G 0.0395  D 1.4741  Aux 0.1593  GAux 0.6237  R1 0.0000
+  step   30000  G 0.0418  D 1.4886  Aux 0.1742  GAux 0.6449  R1 0.0000
+  diag step   30000  Dreal 1.4676  Dfake 0.0028  Dwrong -4.0184  gap 5.4859  cls_acc 1.000  feat_std 1.023524  ema_div 0.1228  fake_std 0.1505  fake_min -0.4492  fake_max 0.5234
+[epoch 076] 41.4s
+  step   30100  G 0.0391  D 1.4829  Aux 0.1677  GAux 0.6296  R1 0.0000
+  step   30200  G 0.0452  D 1.4651  Aux 0.1567  GAux 0.6414  R1 0.0000
+  step   30300  G 0.0391  D 1.4686  Aux 0.1606  GAux 0.6539  R1 0.0000
+  step   30400  G 0.0403  D 1.4906  Aux 0.1780  GAux 0.6500  R1 0.0000
+[epoch 077] 42.1s
+  step   30500  G 0.0448  D 1.4717  Aux 0.1627  GAux 0.6455  R1 0.0000
+  diag step   30500  Dreal 1.3042  Dfake 0.0111  Dwrong -4.2005  gap 5.5047  cls_acc 1.000  feat_std 0.943093  ema_div 0.1253  fake_std 0.1293  fake_min -0.4473  fake_max 0.4199
+  step   30600  G 0.0381  D 1.4679  Aux 0.1572  GAux 0.6331  R1 0.0000
+  step   30700  G 0.0394  D 1.4732  Aux 0.1625  GAux 0.6424  R1 0.0000
+  step   30800  G 0.0388  D 1.4794  Aux 0.1667  GAux 0.6310  R1 0.0000
+[epoch 078] 41.6s
+  step   30900  G 0.0462  D 1.4583  Aux 0.1602  GAux 0.6412  R1 0.0000
+  step   31000  G 0.0433  D 1.4552  Aux 0.1578  GAux 0.6503  R1 0.0000
+  diag step   31000  Dreal 1.2199  Dfake -0.0265  Dwrong -4.4316  gap 5.6515  cls_acc 1.000  feat_std 0.964813  ema_div 0.1183  fake_std 0.1447  fake_min -0.4453  fake_max 0.4707
+  step   31100  G 0.0369  D 1.4656  Aux 0.1580  GAux 0.6361  R1 0.0000
+  step   31200  G 0.0402  D 1.4741  Aux 0.1611  GAux 0.6321  R1 0.0000
+[epoch 079] 42.0s
+  step   31300  G 0.0367  D 1.4474  Aux 0.1556  GAux 0.6604  R1 0.0000
+  step   31400  G 0.0400  D 1.4627  Aux 0.1545  GAux 0.6362  R1 0.0000
+  step   31500  G 0.0336  D 1.4687  Aux 0.1596  GAux 0.6283  R1 0.0000
+  diag step   31500  Dreal 1.4243  Dfake 0.0550  Dwrong -4.2967  gap 5.7210  cls_acc 0.984  feat_std 1.018329  ema_div 0.1215  fake_std 0.1408  fake_min -0.4688  fake_max 0.4688
+[epoch 080] 41.5s
+  step   31600  G 0.0419  D 1.4680  Aux 0.1625  GAux 0.6454  R1 0.0000
+  step   31700  G 0.0394  D 1.4473  Aux 0.1535  GAux 0.6514  R1 0.0000
+  step   31800  G 0.0362  D 1.4526  Aux 0.1524  GAux 0.6437  R1 0.0000
+  step   31900  G 0.0390  D 1.4623  Aux 0.1557  GAux 0.6420  R1 0.0000
+[epoch 081] 41.2s
+  step   32000  G 0.0424  D 1.4534  Aux 0.1526  GAux 0.6272  R1 0.0000
+  diag step   32000  Dreal 1.2765  Dfake -0.0190  Dwrong -4.3789  gap 5.6555  cls_acc 0.969  feat_std 1.041006  ema_div 0.1277  fake_std 0.1442  fake_min -0.4707  fake_max 0.4004
+  step   32100  G 0.0456  D 1.4466  Aux 0.1489  GAux 0.6534  R1 0.0000
+  step   32200  G 0.0371  D 1.4591  Aux 0.1553  GAux 0.6517  R1 0.0000
+  step   32300  G 0.0407  D 1.4581  Aux 0.1561  GAux 0.6439  R1 0.0000
+[epoch 082] 41.6s
+  step   32400  G 0.0496  D 1.4480  Aux 0.1545  GAux 0.6454  R1 0.0000
+  step   32500  G 0.0381  D 1.4425  Aux 0.1483  GAux 0.6532  R1 0.0000
+  diag step   32500  Dreal 1.5177  Dfake -0.0216  Dwrong -3.8778  gap 5.3955  cls_acc 1.000  feat_std 1.078675  ema_div 0.1180  fake_std 0.1370  fake_min -0.4551  fake_max 0.4863
+  step   32600  G 0.0382  D 1.4508  Aux 0.1552  GAux 0.6597  R1 0.0000
+  step   32700  G 0.0404  D 1.4522  Aux 0.1551  GAux 0.6445  R1 0.0000
+[epoch 083] 40.5s
+  step   32800  G 0.0449  D 1.4506  Aux 0.1496  GAux 0.6501  R1 0.0000
+  step   32900  G 0.0418  D 1.4388  Aux 0.1466  GAux 0.6473  R1 0.0000
+  step   33000  G 0.0419  D 1.4475  Aux 0.1495  GAux 0.6565  R1 0.0000
+  diag step   33000  Dreal 1.4231  Dfake -0.0709  Dwrong -4.4145  gap 5.8376  cls_acc 1.000  feat_std 1.011921  ema_div 0.1225  fake_std 0.1418  fake_min -0.4805  fake_max 0.3945
+  step   33100  G 0.0345  D 1.4469  Aux 0.1513  GAux 0.6528  R1 0.0000
+[epoch 084] 40.8s
+  step   33200  G 0.0415  D 1.4371  Aux 0.1441  GAux 0.6503  R1 0.0000
+  step   33300  G 0.0360  D 1.4355  Aux 0.1452  GAux 0.6446  R1 0.0000
+  step   33400  G 0.0440  D 1.4464  Aux 0.1522  GAux 0.6605  R1 0.0000
+  step   33500  G 0.0357  D 1.4456  Aux 0.1507  GAux 0.6439  R1 0.0000
+  diag step   33500  Dreal 1.7200  Dfake -0.0062  Dwrong -4.3363  gap 6.0563  cls_acc 1.000  feat_std 0.979400  ema_div 0.1284  fake_std 0.1384  fake_min -0.5469  fake_max 0.4746
+[epoch 085] 40.5s
+  step   33600  G 0.0436  D 1.4332  Aux 0.1423  GAux 0.6508  R1 0.0000
+  step   33700  G 0.0402  D 1.4270  Aux 0.1407  GAux 0.6393  R1 0.0000
+  step   33800  G 0.0350  D 1.4507  Aux 0.1512  GAux 0.6556  R1 0.0000
+  step   33900  G 0.0314  D 1.4472  Aux 0.1482  GAux 0.6422  R1 0.0000
+[epoch 086] 40.5s
+  step   34000  G 0.0477  D 1.4272  Aux 0.1416  GAux 0.6475  R1 0.0000
+  diag step   34000  Dreal 1.2614  Dfake -0.0578  Dwrong -3.9005  gap 5.1619  cls_acc 0.984  feat_std 0.996693  ema_div 0.1152  fake_std 0.1374  fake_min -0.5195  fake_max 0.4746
+  step   34100  G 0.0373  D 1.4380  Aux 0.1452  GAux 0.6474  R1 0.0000
+  step   34200  G 0.0400  D 1.4381  Aux 0.1464  GAux 0.6508  R1 0.0000
+  step   34300  G 0.0375  D 1.4424  Aux 0.1481  GAux 0.6422  R1 0.0000
+[epoch 087] 40.0s
+  step   34400  G 0.0408  D 1.4195  Aux 0.1376  GAux 0.6436  R1 0.0000
+  step   34500  G 0.0417  D 1.4283  Aux 0.1403  GAux 0.6572  R1 0.0000
+  diag step   34500  Dreal 1.4307  Dfake 0.0264  Dwrong -4.0344  gap 5.4651  cls_acc 1.000  feat_std 1.011961  ema_div 0.1140  fake_std 0.1335  fake_min -0.4141  fake_max 0.5078
+  step   34600  G 0.0392  D 1.4310  Aux 0.1450  GAux 0.6618  R1 0.0000
+  step   34700  G 0.0419  D 1.4340  Aux 0.1471  GAux 0.6607  R1 0.0000
+[epoch 088] 40.8s
+  step   34800  G 0.0390  D 1.4235  Aux 0.1363  GAux 0.6504  R1 0.0000
+  step   34900  G 0.0334  D 1.4223  Aux 0.1384  GAux 0.6483  R1 0.0000
+  step   35000  G 0.0419  D 1.4375  Aux 0.1415  GAux 0.6629  R1 0.0000
+  diag step   35000  Dreal 1.3106  Dfake -0.0155  Dwrong -3.8542  gap 5.1648  cls_acc 1.000  feat_std 0.985015  ema_div 0.1230  fake_std 0.1288  fake_min -0.4609  fake_max 0.4648
+  step   35100  G 0.0344  D 1.4397  Aux 0.1461  GAux 0.6458  R1 0.0000
+[epoch 089] 40.9s
+  step   35200  G 0.0460  D 1.4150  Aux 0.1316  GAux 0.6499  R1 0.0000
+  step   35300  G 0.0404  D 1.4151  Aux 0.1349  GAux 0.6525  R1 0.0000
+  step   35400  G 0.0382  D 1.4288  Aux 0.1409  GAux 0.6527  R1 0.0000
+[epoch 090] 40.4s
+  step   35500  G 0.0432  D 1.4244  Aux 0.1385  GAux 0.6648  R1 0.0000
+  diag step   35500  Dreal 1.2696  Dfake -0.0260  Dwrong -4.0421  gap 5.3118  cls_acc 1.000  feat_std 1.006830  ema_div 0.1129  fake_std 0.1223  fake_min -0.4473  fake_max 0.4160
+  step   35600  G 0.0368  D 1.4072  Aux 0.1270  GAux 0.6473  R1 0.0000
+  step   35700  G 0.0385  D 1.4206  Aux 0.1396  GAux 0.6596  R1 0.0000
+  step   35800  G 0.0372  D 1.4252  Aux 0.1378  GAux 0.6504  R1 0.0000
+[epoch 091] 40.6s
+  step   35900  G 0.0398  D 1.4260  Aux 0.1365  GAux 0.6513  R1 0.0000
+  step   36000  G 0.0412  D 1.4089  Aux 0.1329  GAux 0.6720  R1 0.0000
+  diag step   36000  Dreal 1.4279  Dfake -0.0162  Dwrong -4.2431  gap 5.6709  cls_acc 0.984  feat_std 1.074238  ema_div 0.1100  fake_std 0.1354  fake_min -0.4375  fake_max 0.4414
+  step   36100  G 0.0400  D 1.4092  Aux 0.1276  GAux 0.6669  R1 0.0000
+  step   36200  G 0.0429  D 1.4165  Aux 0.1379  GAux 0.6637  R1 0.0000
+[epoch 092] 40.2s
+  step   36300  G 0.0408  D 1.4178  Aux 0.1347  GAux 0.6733  R1 0.0000
+  step   36400  G 0.0334  D 1.4130  Aux 0.1329  GAux 0.6654  R1 0.0000
+  step   36500  G 0.0446  D 1.4102  Aux 0.1315  GAux 0.6586  R1 0.0000
+  diag step   36500  Dreal 1.5837  Dfake 0.0023  Dwrong -4.0263  gap 5.6101  cls_acc 0.984  feat_std 1.044566  ema_div 0.1203  fake_std 0.1321  fake_min -0.4922  fake_max 0.4707
+  step   36600  G 0.0366  D 1.4114  Aux 0.1338  GAux 0.6596  R1 0.0000
+[epoch 093] 40.4s
+  step   36700  G 0.0446  D 1.4053  Aux 0.1320  GAux 0.6613  R1 0.0000
+  step   36800  G 0.0381  D 1.4045  Aux 0.1258  GAux 0.6667  R1 0.0000
+  step   36900  G 0.0401  D 1.4037  Aux 0.1336  GAux 0.6607  R1 0.0000
+  step   37000  G 0.0408  D 1.4169  Aux 0.1393  GAux 0.6700  R1 0.0000
+  diag step   37000  Dreal 1.2873  Dfake -0.0330  Dwrong -4.0742  gap 5.3615  cls_acc 1.000  feat_std 0.984499  ema_div 0.1137  fake_std 0.1300  fake_min -0.4102  fake_max 0.4395
+[epoch 094] 41.1s
+  step   37100  G 0.0398  D 1.4049  Aux 0.1286  GAux 0.6505  R1 0.0000
+  step   37200  G 0.0410  D 1.3996  Aux 0.1249  GAux 0.6552  R1 0.0000
+  step   37300  G 0.0402  D 1.4069  Aux 0.1344  GAux 0.6731  R1 0.0000
+  step   37400  G 0.0392  D 1.4105  Aux 0.1307  GAux 0.6530  R1 0.0000
+[epoch 095] 40.8s
+  step   37500  G 0.0384  D 1.4006  Aux 0.1250  GAux 0.6624  R1 0.0000
+  diag step   37500  Dreal 1.4536  Dfake 0.0522  Dwrong -3.8890  gap 5.3426  cls_acc 1.000  feat_std 1.020754  ema_div 0.1057  fake_std 0.1257  fake_min -0.4688  fake_max 0.5117
+  step   37600  G 0.0409  D 1.4018  Aux 0.1312  GAux 0.6769  R1 0.0000
+  step   37700  G 0.0389  D 1.4121  Aux 0.1325  GAux 0.6653  R1 0.0000
+  step   37800  G 0.0364  D 1.3994  Aux 0.1261  GAux 0.6634  R1 0.0000
+[epoch 096] 39.1s
+  step   37900  G 0.0427  D 1.3905  Aux 0.1221  GAux 0.6550  R1 0.0000
+  step   38000  G 0.0388  D 1.4044  Aux 0.1309  GAux 0.6774  R1 0.0000
+  diag step   38000  Dreal 1.4042  Dfake -0.0487  Dwrong -4.2615  gap 5.6657  cls_acc 1.000  feat_std 1.027921  ema_div 0.1125  fake_std 0.1231  fake_min -0.5195  fake_max 0.4219
+  step   38100  G 0.0405  D 1.4022  Aux 0.1285  GAux 0.6535  R1 0.0000
+  step   38200  G 0.0358  D 1.4076  Aux 0.1264  GAux 0.6510  R1 0.0000
+[epoch 097] 39.0s
+  step   38300  G 0.0442  D 1.3912  Aux 0.1208  GAux 0.6525  R1 0.0000
+  step   38400  G 0.0443  D 1.3896  Aux 0.1248  GAux 0.6759  R1 0.0000
+  step   38500  G 0.0400  D 1.3948  Aux 0.1253  GAux 0.6753  R1 0.0000
+  diag step   38500  Dreal 1.2717  Dfake 0.0029  Dwrong -4.7928  gap 6.0645  cls_acc 0.984  feat_std 1.162906  ema_div 0.1114  fake_std 0.1174  fake_min -0.4043  fake_max 0.3672
+  step   38600  G 0.0359  D 1.4090  Aux 0.1270  GAux 0.6681  R1 0.0000
+[epoch 098] 39.0s
+  step   38700  G 0.0447  D 1.3828  Aux 0.1186  GAux 0.6767  R1 0.0000
+  step   38800  G 0.0430  D 1.3887  Aux 0.1224  GAux 0.6770  R1 0.0000
+  step   38900  G 0.0405  D 1.3953  Aux 0.1215  GAux 0.6518  R1 0.0000
+  step   39000  G 0.0308  D 1.4053  Aux 0.1253  GAux 0.6511  R1 0.0000
+  diag step   39000  Dreal 1.2595  Dfake -0.0195  Dwrong -4.0590  gap 5.3185  cls_acc 1.000  feat_std 1.084255  ema_div 0.1120  fake_std 0.1309  fake_min -0.4766  fake_max 0.4043
+[epoch 099] 39.4s
+  step   39100  G 0.0454  D 1.3745  Aux 0.1183  GAux 0.6705  R1 0.0000
+  step   39200  G 0.0409  D 1.3853  Aux 0.1218  GAux 0.6531  R1 0.0000
+  step   39300  G 0.0421  D 1.3976  Aux 0.1239  GAux 0.6580  R1 0.0000
+[epoch 100] 39.2s
+  step   39400  G 0.0446  D 1.3878  Aux 0.1200  GAux 0.6717  R1 0.0000
+  step   39500  G 0.0432  D 1.3785  Aux 0.1188  GAux 0.6610  R1 0.0000
+  diag step   39500  Dreal 1.4516  Dfake -0.0556  Dwrong -4.0170  gap 5.4687  cls_acc 1.000  feat_std 1.099573  ema_div 0.1085  fake_std 0.1353  fake_min -0.4961  fake_max 0.4551
+  step   39600  G 0.0420  D 1.3771  Aux 0.1159  GAux 0.6890  R1 0.0000
+  step   39700  G 0.0368  D 1.3932  Aux 0.1214  GAux 0.6784  R1 0.0000
+[epoch 101] 42.9s
+  step   39800  G 0.0378  D 1.3877  Aux 0.1202  GAux 0.6610  R1 0.0000
+  step   39900  G 0.0413  D 1.3776  Aux 0.1152  GAux 0.6719  R1 0.0000
+  step   40000  G 0.0395  D 1.3823  Aux 0.1184  GAux 0.6793  R1 0.0000
+  diag step   40000  Dreal 1.3557  Dfake -0.0467  Dwrong -4.8120  gap 6.1676  cls_acc 1.000  feat_std 1.137117  ema_div 0.1067  fake_std 0.1267  fake_min -0.4648  fake_max 0.5977
+  step   40100  G 0.0412  D 1.3932  Aux 0.1257  GAux 0.6800  R1 0.0000
+[epoch 102] 45.2s
+  step   40200  G 0.0405  D 1.3821  Aux 0.1173  GAux 0.6616  R1 0.0000
+  step   40300  G 0.0459  D 1.3740  Aux 0.1162  GAux 0.6820  R1 0.0000
+  step   40400  G 0.0425  D 1.3790  Aux 0.1213  GAux 0.6950  R1 0.0000
+  step   40500  G 0.0351  D 1.3909  Aux 0.1207  GAux 0.6980  R1 0.0000
+  diag step   40500  Dreal 1.1794  Dfake 0.0138  Dwrong -4.0595  gap 5.2389  cls_acc 0.984  feat_std 1.082043  ema_div 0.1145  fake_std 0.1297  fake_min -0.4219  fake_max 0.4980
+[epoch 103] 44.3s
+  step   40600  G 0.0380  D 1.3820  Aux 0.1154  GAux 0.6601  R1 0.0000
+  step   40700  G 0.0401  D 1.3694  Aux 0.1095  GAux 0.6927  R1 0.0000
+  step   40800  G 0.0389  D 1.3794  Aux 0.1204  GAux 0.6666  R1 0.0000
+  step   40900  G 0.0407  D 1.3839  Aux 0.1187  GAux 0.6657  R1 0.0000
+[epoch 104] 43.7s
+  step   41000  G 0.0397  D 1.3716  Aux 0.1137  GAux 0.6768  R1 0.0000
+  diag step   41000  Dreal 1.6259  Dfake -0.0058  Dwrong -4.3419  gap 5.9678  cls_acc 1.000  feat_std 1.166925  ema_div 0.1063  fake_std 0.1333  fake_min -0.4590  fake_max 0.4414
+  step   41100  G 0.0427  D 1.3653  Aux 0.1102  GAux 0.6934  R1 0.0000
+  step   41200  G 0.0433  D 1.3782  Aux 0.1163  GAux 0.6755  R1 0.0000
+  step   41300  G 0.0351  D 1.3790  Aux 0.1161  GAux 0.6748  R1 0.0000
+[epoch 105] 40.5s
+  step   41400  G 0.0472  D 1.3684  Aux 0.1168  GAux 0.6854  R1 0.0000
+  step   41500  G 0.0427  D 1.3670  Aux 0.1115  GAux 0.7000  R1 0.0000
+  diag step   41500  Dreal 1.3739  Dfake 0.0211  Dwrong -4.2730  gap 5.6469  cls_acc 1.000  feat_std 1.106500  ema_div 0.1087  fake_std 0.1256  fake_min -0.4395  fake_max 0.4453
+  step   41600  G 0.0336  D 1.3614  Aux 0.1073  GAux 0.6751  R1 0.0000
+  step   41700  G 0.0346  D 1.3800  Aux 0.1174  GAux 0.6827  R1 0.0000
+[epoch 106] 39.4s
+  step   41800  G 0.0424  D 1.3660  Aux 0.1124  GAux 0.6771  R1 0.0000
+  step   41900  G 0.0399  D 1.3620  Aux 0.1087  GAux 0.6815  R1 0.0000
+  step   42000  G 0.0373  D 1.3708  Aux 0.1151  GAux 0.6881  R1 0.0000
+  diag step   42000  Dreal 1.4401  Dfake 0.0201  Dwrong -4.4290  gap 5.8691  cls_acc 0.984  feat_std 1.148223  ema_div 0.1036  fake_std 0.1243  fake_min -0.4180  fake_max 0.3672
+  step   42100  G 0.0418  D 1.3733  Aux 0.1137  GAux 0.6873  R1 0.0000
+[epoch 107] 42.2s
+  step   42200  G 0.0384  D 1.3642  Aux 0.1118  GAux 0.6949  R1 0.0000
+  step   42300  G 0.0414  D 1.3632  Aux 0.1050  GAux 0.6726  R1 0.0000
+  step   42400  G 0.0394  D 1.3685  Aux 0.1153  GAux 0.6956  R1 0.0000
+  step   42500  G 0.0377  D 1.3682  Aux 0.1110  GAux 0.6900  R1 0.0000
+  diag step   42500  Dreal 1.3965  Dfake 0.0395  Dwrong -3.8699  gap 5.2664  cls_acc 1.000  feat_std 1.146589  ema_div 0.1028  fake_std 0.1284  fake_min -0.4238  fake_max 0.4395
+[epoch 108] 40.4s
+  step   42600  G 0.0411  D 1.3619  Aux 0.1067  GAux 0.6791  R1 0.0000
+  step   42700  G 0.0335  D 1.3658  Aux 0.1077  GAux 0.6866  R1 0.0000
+  step   42800  G 0.0414  D 1.3659  Aux 0.1113  GAux 0.6847  R1 0.0000
+  step   42900  G 0.0432  D 1.3692  Aux 0.1150  GAux 0.6926  R1 0.0000
+[epoch 109] 40.7s
+  step   43000  G 0.0438  D 1.3520  Aux 0.1076  GAux 0.7006  R1 0.0000
+  diag step   43000  Dreal 1.6111  Dfake -0.0541  Dwrong -3.9489  gap 5.5600  cls_acc 1.000  feat_std 1.157689  ema_div 0.1058  fake_std 0.1210  fake_min -0.3672  fake_max 0.5234
+  step   43100  G 0.0360  D 1.3634  Aux 0.1114  GAux 0.6882  R1 0.0000
+  step   43200  G 0.0427  D 1.3576  Aux 0.1082  GAux 0.6812  R1 0.0000
+[epoch 110] 39.7s
+  step   43300  G 0.0415  D 1.3668  Aux 0.1136  GAux 0.6839  R1 0.0000
+  step   43400  G 0.0444  D 1.3381  Aux 0.1013  GAux 0.6924  R1 0.0000
+  step   43500  G 0.0359  D 1.3595  Aux 0.1111  GAux 0.7015  R1 0.0000
+  diag step   43500  Dreal 1.5745  Dfake 0.0788  Dwrong -3.7907  gap 5.3652  cls_acc 0.984  feat_std 1.075919  ema_div 0.1071  fake_std 0.1233  fake_min -0.3867  fake_max 0.3945
+  step   43600  G 0.0391  D 1.3621  Aux 0.1092  GAux 0.6876  R1 0.0000
+[epoch 111] 41.6s
+  step   43700  G 0.0366  D 1.3580  Aux 0.1086  GAux 0.6919  R1 0.0000
+  step   43800  G 0.0408  D 1.3474  Aux 0.1051  GAux 0.6891  R1 0.0000
+  step   43900  G 0.0460  D 1.3485  Aux 0.1040  GAux 0.6949  R1 0.0000
+  step   44000  G 0.0368  D 1.3638  Aux 0.1092  GAux 0.6830  R1 0.0000
+  diag step   44000  Dreal 1.3692  Dfake -0.0532  Dwrong -4.4646  gap 5.8338  cls_acc 1.000  feat_std 1.121568  ema_div 0.0969  fake_std 0.1149  fake_min -0.4316  fake_max 0.3672
+[epoch 112] 40.3s
+  step   44100  G 0.0405  D 1.3524  Aux 0.1087  GAux 0.6954  R1 0.0000
+  step   44200  G 0.0405  D 1.3473  Aux 0.1011  GAux 0.6871  R1 0.0000
+  step   44300  G 0.0403  D 1.3547  Aux 0.1044  GAux 0.6883  R1 0.0000
+  step   44400  G 0.0359  D 1.3560  Aux 0.1039  GAux 0.6865  R1 0.0000
+[epoch 113] 39.3s
+  step   44500  G 0.0414  D 1.3576  Aux 0.1073  GAux 0.6947  R1 0.0000
+  diag step   44500  Dreal 1.2478  Dfake -0.1260  Dwrong -4.1716  gap 5.4195  cls_acc 1.000  feat_std 1.114212  ema_div 0.1054  fake_std 0.1198  fake_min -0.3672  fake_max 0.3965
+  step   44600  G 0.0360  D 1.3504  Aux 0.1029  GAux 0.6907  R1 0.0000
+  step   44700  G 0.0404  D 1.3503  Aux 0.1027  GAux 0.6818  R1 0.0000
+  step   44800  G 0.0415  D 1.3555  Aux 0.1057  GAux 0.6936  R1 0.0000
+[epoch 114] 39.1s
+  step   44900  G 0.0339  D 1.3494  Aux 0.1000  GAux 0.6989  R1 0.0000
+  step   45000  G 0.0481  D 1.3416  Aux 0.1050  GAux 0.7158  R1 0.0000
+  diag step   45000  Dreal 1.4118  Dfake -0.0275  Dwrong -4.0030  gap 5.4148  cls_acc 1.000  feat_std 1.131528  ema_div 0.1016  fake_std 0.1164  fake_min -0.3867  fake_max 0.4102
+  step   45100  G 0.0367  D 1.3541  Aux 0.1058  GAux 0.6904  R1 0.0000
+  step   45200  G 0.0341  D 1.3489  Aux 0.1011  GAux 0.6790  R1 0.0000
+[epoch 115] 40.3s
+  step   45300  G 0.0441  D 1.3428  Aux 0.1021  GAux 0.7021  R1 0.0000
+  step   45400  G 0.0383  D 1.3395  Aux 0.0992  GAux 0.6787  R1 0.0000
+  step   45500  G 0.0427  D 1.3416  Aux 0.0991  GAux 0.6869  R1 0.0000
+  diag step   45500  Dreal 1.7388  Dfake -0.0583  Dwrong -4.7258  gap 6.4645  cls_acc 1.000  feat_std 1.280096  ema_div 0.1057  fake_std 0.1248  fake_min -0.4648  fake_max 0.4863
+  step   45600  G 0.0316  D 1.3545  Aux 0.1068  GAux 0.6888  R1 0.0000
+[epoch 116] 42.6s
+  step   45700  G 0.0462  D 1.3360  Aux 0.1022  GAux 0.7004  R1 0.0000
+  step   45800  G 0.0401  D 1.3410  Aux 0.0976  GAux 0.6969  R1 0.0000
+  step   45900  G 0.0398  D 1.3473  Aux 0.1001  GAux 0.6823  R1 0.0000
+  step   46000  G 0.0356  D 1.3511  Aux 0.1010  GAux 0.6893  R1 0.0000
+  diag step   46000  Dreal 1.4640  Dfake 0.0060  Dwrong -3.6428  gap 5.1068  cls_acc 1.000  feat_std 1.084079  ema_div 0.1060  fake_std 0.1206  fake_min -0.4023  fake_max 0.4590
+[epoch 117] 39.3s
+  step   46100  G 0.0425  D 1.3300  Aux 0.0972  GAux 0.7054  R1 0.0000
+  step   46200  G 0.0385  D 1.3403  Aux 0.0972  GAux 0.6855  R1 0.0000
+  step   46300  G 0.0409  D 1.3449  Aux 0.1008  GAux 0.6922  R1 0.0000
+  step   46400  G 0.0398  D 1.3453  Aux 0.0999  GAux 0.6928  R1 0.0000
+[epoch 118] 39.2s
+  step   46500  G 0.0450  D 1.3233  Aux 0.0929  GAux 0.7134  R1 0.0000
+  diag step   46500  Dreal 1.7614  Dfake 0.0220  Dwrong -4.0685  gap 5.8299  cls_acc 1.000  feat_std 1.144452  ema_div 0.1135  fake_std 0.1241  fake_min -0.3926  fake_max 0.3555
+  step   46600  G 0.0412  D 1.3322  Aux 0.0975  GAux 0.6939  R1 0.0000
+  step   46700  G 0.0432  D 1.3453  Aux 0.1023  GAux 0.7039  R1 0.0000
+  step   46800  G 0.0380  D 1.3410  Aux 0.0984  GAux 0.6928  R1 0.0000
+[epoch 119] 41.2s
+  step   46900  G 0.0384  D 1.3302  Aux 0.0949  GAux 0.6920  R1 0.0000
+  step   47000  G 0.0434  D 1.3322  Aux 0.0952  GAux 0.7101  R1 0.0000
+  diag step   47000  Dreal 1.4365  Dfake -0.0211  Dwrong -4.1490  gap 5.5855  cls_acc 1.000  feat_std 1.180194  ema_div 0.1039  fake_std 0.1161  fake_min -0.3984  fake_max 0.3848
+  step   47100  G 0.0401  D 1.3413  Aux 0.0986  GAux 0.6941  R1 0.0000
+[epoch 120] 42.6s
+  step   47200  G 0.0427  D 1.3342  Aux 0.0967  GAux 0.7150  R1 0.0000
+  step   47300  G 0.0444  D 1.3156  Aux 0.0930  GAux 0.7156  R1 0.0000
+  step   47400  G 0.0415  D 1.3331  Aux 0.0981  GAux 0.7030  R1 0.0000
+  step   47500  G 0.0326  D 1.3369  Aux 0.0979  GAux 0.6931  R1 0.0000
+  diag step   47500  Dreal 1.6171  Dfake 0.0145  Dwrong -4.2805  gap 5.8976  cls_acc 1.000  feat_std 1.190845  ema_div 0.1052  fake_std 0.1191  fake_min -0.3945  fake_max 0.3418
+[epoch 121] 41.6s
+  step   47600  G 0.0398  D 1.3391  Aux 0.0971  GAux 0.6989  R1 0.0000
+  step   47700  G 0.0461  D 1.3180  Aux 0.0912  GAux 0.6968  R1 0.0000
+  step   47800  G 0.0394  D 1.3332  Aux 0.0969  GAux 0.6984  R1 0.0000
+  step   47900  G 0.0367  D 1.3329  Aux 0.0985  GAux 0.6944  R1 0.0000
+[epoch 122] 41.0s
+  step   48000  G 0.0411  D 1.3307  Aux 0.0938  GAux 0.7046  R1 0.0000
+  diag step   48000  Dreal 1.6242  Dfake 0.0225  Dwrong -4.0228  gap 5.6470  cls_acc 1.000  feat_std 1.193622  ema_div 0.1019  fake_std 0.1179  fake_min -0.4414  fake_max 0.4922
+  step   48100  G 0.0419  D 1.3235  Aux 0.0929  GAux 0.7097  R1 0.0000
+  step   48200  G 0.0388  D 1.3293  Aux 0.0959  GAux 0.7101  R1 0.0000
+  step   48300  G 0.0384  D 1.3311  Aux 0.0938  GAux 0.7059  R1 0.0000
+[epoch 123] 41.3s
+  step   48400  G 0.0414  D 1.3274  Aux 0.0945  GAux 0.7046  R1 0.0000
+  step   48500  G 0.0421  D 1.3243  Aux 0.0900  GAux 0.6960  R1 0.0000
+  diag step   48500  Dreal 1.4243  Dfake -0.0570  Dwrong -3.9769  gap 5.4013  cls_acc 0.984  feat_std 1.177306  ema_div 0.1014  fake_std 0.1145  fake_min -0.4121  fake_max 0.3594
+  step   48600  G 0.0409  D 1.3239  Aux 0.0946  GAux 0.7014  R1 0.0000
+  step   48700  G 0.0355  D 1.3317  Aux 0.0960  GAux 0.7222  R1 0.0000
+[epoch 124] 41.0s
+  step   48800  G 0.0454  D 1.3229  Aux 0.0922  GAux 0.7116  R1 0.0000
+  step   48900  G 0.0445  D 1.3143  Aux 0.0880  GAux 0.7234  R1 0.0000
+  step   49000  G 0.0384  D 1.3230  Aux 0.0913  GAux 0.7180  R1 0.0000
+  diag step   49000  Dreal 1.3717  Dfake -0.0163  Dwrong -4.7852  gap 6.1569  cls_acc 1.000  feat_std 1.237774  ema_div 0.0969  fake_std 0.1154  fake_min -0.3848  fake_max 0.4492
+  step   49100  G 0.0406  D 1.3306  Aux 0.0973  GAux 0.7286  R1 0.0000
+[epoch 125] 41.4s
+  step   49200  G 0.0447  D 1.3185  Aux 0.0957  GAux 0.7333  R1 0.0000
+  step   49300  G 0.0355  D 1.3155  Aux 0.0883  GAux 0.7141  R1 0.0000
+  step   49400  G 0.0428  D 1.3233  Aux 0.0940  GAux 0.7337  R1 0.0000
+  step   49500  G 0.0338  D 1.3228  Aux 0.0895  GAux 0.7089  R1 0.0000
+  diag step   49500  Dreal 1.4893  Dfake -0.0224  Dwrong -4.5838  gap 6.0731  cls_acc 1.000  feat_std 1.224026  ema_div 0.1051  fake_std 0.1105  fake_min -0.4258  fake_max 0.3691
+[epoch 126] 41.7s
+  step   49600  G 0.0439  D 1.3143  Aux 0.0899  GAux 0.7241  R1 0.0000
+  step   49700  G 0.0402  D 1.3193  Aux 0.0885  GAux 0.7135  R1 0.0000
+  step   49800  G 0.0393  D 1.3266  Aux 0.0940  GAux 0.7197  R1 0.0000
+  step   49900  G 0.0396  D 1.3279  Aux 0.0926  GAux 0.7044  R1 0.0000
+[epoch 127] 41.3s
+  step   50000  G 0.0433  D 1.3042  Aux 0.0862  GAux 0.7212  R1 0.0000
+  diag step   50000  Dreal 1.3766  Dfake -0.0768  Dwrong -4.5616  gap 5.9382  cls_acc 1.000  feat_std 1.228770  ema_div 0.1003  fake_std 0.1123  fake_min -0.3965  fake_max 0.4395
+  step   50100  G 0.0379  D 1.3139  Aux 0.0898  GAux 0.7192  R1 0.0000
+  step   50200  G 0.0354  D 1.3208  Aux 0.0905  GAux 0.7124  R1 0.0000
+  step   50300  G 0.0406  D 1.3216  Aux 0.0916  GAux 0.7061  R1 0.0000
+[epoch 128] 41.6s
+  step   50400  G 0.0461  D 1.3082  Aux 0.0856  GAux 0.7126  R1 0.0000
+  step   50500  G 0.0414  D 1.3116  Aux 0.0860  GAux 0.7088  R1 0.0000
+  diag step   50500  Dreal 1.6663  Dfake -0.0564  Dwrong -4.7996  gap 6.4659  cls_acc 1.000  feat_std 1.224716  ema_div 0.1003  fake_std 0.1145  fake_min -0.4238  fake_max 0.3164
+  step   50600  G 0.0336  D 1.3171  Aux 0.0916  GAux 0.7249  R1 0.0000
+  step   50700  G 0.0382  D 1.3215  Aux 0.0924  GAux 0.7227  R1 0.0000
+[epoch 129] 41.6s
+  step   50800  G 0.0448  D 1.3037  Aux 0.0852  GAux 0.7306  R1 0.0000
+  step   50900  G 0.0404  D 1.3084  Aux 0.0863  GAux 0.7335  R1 0.0000
+  step   51000  G 0.0384  D 1.3160  Aux 0.0904  GAux 0.7255  R1 0.0000
+  diag step   51000  Dreal 1.4420  Dfake -0.0606  Dwrong -4.1696  gap 5.6115  cls_acc 0.984  feat_std 1.214926  ema_div 0.0976  fake_std 0.1099  fake_min -0.4004  fake_max 0.3691
+[epoch 130] 41.4s
+  step   51100  G 0.0440  D 1.3116  Aux 0.0874  GAux 0.7227  R1 0.0000
+  step   51200  G 0.0454  D 1.2967  Aux 0.0848  GAux 0.7308  R1 0.0000
+  step   51300  G 0.0335  D 1.3086  Aux 0.0871  GAux 0.7280  R1 0.0000
+  step   51400  G 0.0371  D 1.3097  Aux 0.0867  GAux 0.7126  R1 0.0000
+[epoch 131] 41.0s
+  step   51500  G 0.0436  D 1.3090  Aux 0.0853  GAux 0.7136  R1 0.0000
+  diag step   51500  Dreal 1.6690  Dfake 0.0116  Dwrong -4.8500  gap 6.5190  cls_acc 1.000  feat_std 1.279368  ema_div 0.1000  fake_std 0.1124  fake_min -0.3652  fake_max 0.4160
+  step   51600  G 0.0398  D 1.3045  Aux 0.0851  GAux 0.7312  R1 0.0000
+  step   51700  G 0.0417  D 1.3074  Aux 0.0856  GAux 0.7389  R1 0.0000
+  step   51800  G 0.0421  D 1.3104  Aux 0.0891  GAux 0.7296  R1 0.0000
+[epoch 132] 41.6s
+  step   51900  G 0.0372  D 1.3115  Aux 0.0890  GAux 0.7277  R1 0.0000
+  step   52000  G 0.0437  D 1.3033  Aux 0.0823  GAux 0.7139  R1 0.0000
+  diag step   52000  Dreal 1.3818  Dfake -0.0069  Dwrong -4.0648  gap 5.4466  cls_acc 1.000  feat_std 1.195825  ema_div 0.0995  fake_std 0.1109  fake_min -0.3867  fake_max 0.4238
+  step   52100  G 0.0399  D 1.3129  Aux 0.0860  GAux 0.7202  R1 0.0000
+  step   52200  G 0.0389  D 1.3059  Aux 0.0877  GAux 0.7320  R1 0.0000
+[epoch 133] 40.4s
+  step   52300  G 0.0401  D 1.3014  Aux 0.0822  GAux 0.7202  R1 0.0000
+  step   52400  G 0.0447  D 1.2985  Aux 0.0811  GAux 0.7350  R1 0.0000
+  step   52500  G 0.0405  D 1.3071  Aux 0.0868  GAux 0.7129  R1 0.0000
+  diag step   52500  Dreal 1.1914  Dfake -0.0781  Dwrong -4.5174  gap 5.7089  cls_acc 1.000  feat_std 1.211399  ema_div 0.1003  fake_std 0.1107  fake_min -0.3594  fake_max 0.3477
+  step   52600  G 0.0402  D 1.3107  Aux 0.0888  GAux 0.7256  R1 0.0000
+[epoch 134] 40.5s
+  step   52700  G 0.0405  D 1.3077  Aux 0.0867  GAux 0.7375  R1 0.0000
+  step   52800  G 0.0401  D 1.2940  Aux 0.0839  GAux 0.7314  R1 0.0000
+  step   52900  G 0.0405  D 1.3038  Aux 0.0852  GAux 0.7412  R1 0.0000
+  step   53000  G 0.0398  D 1.3068  Aux 0.0852  GAux 0.7371  R1 0.0000
+  diag step   53000  Dreal 1.7570  Dfake -0.0301  Dwrong -4.5568  gap 6.3138  cls_acc 1.000  feat_std 1.310454  ema_div 0.0910  fake_std 0.0999  fake_min -0.3477  fake_max 0.3574
+[epoch 135] 41.8s
+  step   53100  G 0.0454  D 1.2962  Aux 0.0824  GAux 0.7527  R1 0.0000
+  step   53200  G 0.0419  D 1.2962  Aux 0.0822  GAux 0.7531  R1 0.0000
+  step   53300  G 0.0378  D 1.2978  Aux 0.0846  GAux 0.7391  R1 0.0000
+  step   53400  G 0.0341  D 1.3022  Aux 0.0835  GAux 0.7324  R1 0.0000
+[epoch 136] 40.9s
+  step   53500  G 0.0423  D 1.2934  Aux 0.0801  GAux 0.7185  R1 0.0000
+  diag step   53500  Dreal 1.4462  Dfake -0.0463  Dwrong -4.1146  gap 5.5608  cls_acc 1.000  feat_std 1.322999  ema_div 0.0976  fake_std 0.1063  fake_min -0.3320  fake_max 0.3008
+  step   53600  G 0.0394  D 1.2968  Aux 0.0827  GAux 0.7436  R1 0.0000
+  step   53700  G 0.0405  D 1.3012  Aux 0.0850  GAux 0.7445  R1 0.0000
+  step   53800  G 0.0413  D 1.3050  Aux 0.0841  GAux 0.7370  R1 0.0000
+[epoch 137] 41.0s
+  step   53900  G 0.0387  D 1.2947  Aux 0.0814  GAux 0.7404  R1 0.0000
+  step   54000  G 0.0453  D 1.2933  Aux 0.0801  GAux 0.7484  R1 0.0000
+  diag step   54000  Dreal 1.6215  Dfake -0.0076  Dwrong -4.9551  gap 6.5767  cls_acc 1.000  feat_std 1.373585  ema_div 0.0969  fake_std 0.1102  fake_min -0.3867  fake_max 0.4414
+  step   54100  G 0.0366  D 1.3016  Aux 0.0816  GAux 0.7290  R1 0.0000
+  step   54200  G 0.0413  D 1.2979  Aux 0.0823  GAux 0.7324  R1 0.0000
+[epoch 138] 41.7s
+  step   54300  G 0.0410  D 1.2859  Aux 0.0794  GAux 0.7509  R1 0.0000
+  step   54400  G 0.0394  D 1.2968  Aux 0.0832  GAux 0.7418  R1 0.0000
+  step   54500  G 0.0396  D 1.2940  Aux 0.0836  GAux 0.7357  R1 0.0000
+  diag step   54500  Dreal 1.4549  Dfake -0.0480  Dwrong -4.2027  gap 5.6577  cls_acc 1.000  feat_std 1.348120  ema_div 0.0959  fake_std 0.0999  fake_min -0.4082  fake_max 0.3652
+  step   54600  G 0.0378  D 1.2970  Aux 0.0801  GAux 0.7208  R1 0.0000
+[epoch 139] 40.8s
+  step   54700  G 0.0395  D 1.2867  Aux 0.0763  GAux 0.7415  R1 0.0000
+  step   54800  G 0.0446  D 1.2877  Aux 0.0789  GAux 0.7497  R1 0.0000
+  step   54900  G 0.0381  D 1.2955  Aux 0.0832  GAux 0.7438  R1 0.0000
+[epoch 140] 42.0s
+  step   55000  G 0.0400  D 1.2952  Aux 0.0816  GAux 0.7346  R1 0.0000
+  diag step   55000  Dreal 1.5823  Dfake -0.0321  Dwrong -3.9621  gap 5.5445  cls_acc 1.000  feat_std 1.303119  ema_div 0.0977  fake_std 0.1110  fake_min -0.3965  fake_max 0.4805
+  step   55100  G 0.0463  D 1.2867  Aux 0.0771  GAux 0.7443  R1 0.0000
+  step   55200  G 0.0436  D 1.2887  Aux 0.0804  GAux 0.7443  R1 0.0000
+  step   55300  G 0.0339  D 1.2996  Aux 0.0798  GAux 0.7288  R1 0.0000
+[epoch 141] 42.0s
+  step   55400  G 0.0428  D 1.2902  Aux 0.0818  GAux 0.7386  R1 0.0000
+  step   55500  G 0.0428  D 1.2853  Aux 0.0779  GAux 0.7628  R1 0.0000
+  diag step   55500  Dreal 1.4146  Dfake -0.0810  Dwrong -4.8981  gap 6.3127  cls_acc 1.000  feat_std 1.391934  ema_div 0.0903  fake_std 0.1046  fake_min -0.3672  fake_max 0.4141
+  step   55600  G 0.0385  D 1.2887  Aux 0.0798  GAux 0.7457  R1 0.0000
+  step   55700  G 0.0337  D 1.2933  Aux 0.0806  GAux 0.7370  R1 0.0000
+[epoch 142] 41.8s
+  step   55800  G 0.0348  D 1.2948  Aux 0.0815  GAux 0.7381  R1 0.0000
+  step   55900  G 0.0411  D 1.2830  Aux 0.0769  GAux 0.7376  R1 0.0000
+  step   56000  G 0.0396  D 1.2949  Aux 0.0773  GAux 0.7294  R1 0.0000
+  diag step   56000  Dreal 1.6202  Dfake -0.0246  Dwrong -4.1283  gap 5.7485  cls_acc 1.000  feat_std 1.269418  ema_div 0.0939  fake_std 0.1034  fake_min -0.3691  fake_max 0.4141
+  step   56100  G 0.0409  D 1.2894  Aux 0.0787  GAux 0.7403  R1 0.0000
+[epoch 143] 41.9s
+  step   56200  G 0.0394  D 1.2883  Aux 0.0786  GAux 0.7287  R1 0.0000
+  step   56300  G 0.0415  D 1.2791  Aux 0.0705  GAux 0.7337  R1 0.0000
+  step   56400  G 0.0400  D 1.2874  Aux 0.0786  GAux 0.7446  R1 0.0000
+  step   56500  G 0.0398  D 1.2895  Aux 0.0786  GAux 0.7508  R1 0.0000
+  diag step   56500  Dreal 1.9351  Dfake 0.0112  Dwrong -4.8747  gap 6.8098  cls_acc 1.000  feat_std 1.384183  ema_div 0.0914  fake_std 0.1059  fake_min -0.3574  fake_max 0.3867
+[epoch 144] 42.9s
+  step   56600  G 0.0404  D 1.2806  Aux 0.0759  GAux 0.7579  R1 0.0000
+  step   56700  G 0.0365  D 1.2800  Aux 0.0747  GAux 0.7539  R1 0.0000
+  step   56800  G 0.0383  D 1.2869  Aux 0.0807  GAux 0.7536  R1 0.0000
+  step   56900  G 0.0430  D 1.2888  Aux 0.0780  GAux 0.7324  R1 0.0000
+[epoch 145] 41.0s
+  step   57000  G 0.0447  D 1.2764  Aux 0.0709  GAux 0.7465  R1 0.0000
+  diag step   57000  Dreal 1.5295  Dfake -0.0075  Dwrong -4.6099  gap 6.1394  cls_acc 1.000  feat_std 1.343584  ema_div 0.0943  fake_std 0.1037  fake_min -0.3320  fake_max 0.4062
+  step   57100  G 0.0388  D 1.2764  Aux 0.0743  GAux 0.7598  R1 0.0000
+  step   57200  G 0.0394  D 1.2819  Aux 0.0770  GAux 0.7434  R1 0.0000
+  step   57300  G 0.0420  D 1.2887  Aux 0.0811  GAux 0.7414  R1 0.0000
+[epoch 146] 42.1s
+  step   57400  G 0.0405  D 1.2788  Aux 0.0738  GAux 0.7448  R1 0.0000
+  step   57500  G 0.0466  D 1.2769  Aux 0.0760  GAux 0.7539  R1 0.0000
+  diag step   57500  Dreal 1.6180  Dfake 0.0303  Dwrong -4.6930  gap 6.3110  cls_acc 1.000  feat_std 1.374154  ema_div 0.0934  fake_std 0.1086  fake_min -0.4043  fake_max 0.3711
+  step   57600  G 0.0327  D 1.2787  Aux 0.0743  GAux 0.7650  R1 0.0000
+  step   57700  G 0.0355  D 1.2897  Aux 0.0814  GAux 0.7464  R1 0.0000
+[epoch 147] 42.1s
+  step   57800  G 0.0455  D 1.2742  Aux 0.0718  GAux 0.7416  R1 0.0000
+  step   57900  G 0.0418  D 1.2776  Aux 0.0745  GAux 0.7543  R1 0.0000
+  step   58000  G 0.0363  D 1.2833  Aux 0.0748  GAux 0.7443  R1 0.0000
+  diag step   58000  Dreal 1.4483  Dfake -0.0391  Dwrong -4.3349  gap 5.7832  cls_acc 1.000  feat_std 1.331310  ema_div 0.0864  fake_std 0.1059  fake_min -0.3945  fake_max 0.3691
+  step   58100  G 0.0414  D 1.2889  Aux 0.0784  GAux 0.7503  R1 0.0000
+[epoch 148] 42.1s
+  step   58200  G 0.0440  D 1.2709  Aux 0.0710  GAux 0.7392  R1 0.0000
+  step   58300  G 0.0370  D 1.2733  Aux 0.0690  GAux 0.7588  R1 0.0000
+  step   58400  G 0.0409  D 1.2849  Aux 0.0778  GAux 0.7474  R1 0.0000
+  step   58500  G 0.0429  D 1.2791  Aux 0.0769  GAux 0.7509  R1 0.0000
+  diag step   58500  Dreal 1.4751  Dfake -0.0381  Dwrong -4.6286  gap 6.1037  cls_acc 1.000  feat_std 1.408137  ema_div 0.0985  fake_std 0.1065  fake_min -0.3770  fake_max 0.3652
+[epoch 149] 42.7s
+  step   58600  G 0.0403  D 1.2675  Aux 0.0695  GAux 0.7448  R1 0.0000
+  step   58700  G 0.0386  D 1.2764  Aux 0.0737  GAux 0.7421  R1 0.0000
+  step   58800  G 0.0407  D 1.2763  Aux 0.0762  GAux 0.7482  R1 0.0000
+[epoch 150] 41.5s
+  step   58900  G 0.0425  D 1.2729  Aux 0.0754  GAux 0.7514  R1 0.0000
+  step   59000  G 0.0426  D 1.2630  Aux 0.0719  GAux 0.7757  R1 0.0000
+  diag step   59000  Dreal 1.5054  Dfake -0.0262  Dwrong -4.3456  gap 5.8510  cls_acc 1.000  feat_std 1.407321  ema_div 0.0961  fake_std 0.1003  fake_min -0.3262  fake_max 0.3164
+  step   59100  G 0.0405  D 1.2746  Aux 0.0731  GAux 0.7526  R1 0.0000
+  step   59200  G 0.0395  D 1.2783  Aux 0.0737  GAux 0.7646  R1 0.0000
+[epoch 151] 41.2s
+  step   59300  G 0.0405  D 1.2780  Aux 0.0740  GAux 0.7520  R1 0.0000
+  step   59400  G 0.0438  D 1.2681  Aux 0.0715  GAux 0.7628  R1 0.0000
+  step   59500  G 0.0399  D 1.2650  Aux 0.0708  GAux 0.7643  R1 0.0000
+  diag step   59500  Dreal 1.6905  Dfake -0.0060  Dwrong -4.5926  gap 6.2831  cls_acc 1.000  feat_std 1.425943  ema_div 0.0847  fake_std 0.0976  fake_min -0.3184  fake_max 0.3438
+  step   59600  G 0.0395  D 1.2761  Aux 0.0740  GAux 0.7627  R1 0.0000
+[epoch 152] 41.5s
+  step   59700  G 0.0391  D 1.2763  Aux 0.0757  GAux 0.7774  R1 0.0000
+  step   59800  G 0.0418  D 1.2697  Aux 0.0715  GAux 0.7625  R1 0.0000
+  step   59900  G 0.0408  D 1.2670  Aux 0.0696  GAux 0.7648  R1 0.0000
+  step   60000  G 0.0370  D 1.2727  Aux 0.0715  GAux 0.7570  R1 0.0000
+  diag step   60000  Dreal 1.3027  Dfake -0.0953  Dwrong -4.5149  gap 5.8176  cls_acc 1.000  feat_std 1.362047  ema_div 0.0897  fake_std 0.1018  fake_min -0.4062  fake_max 0.4277
+[epoch 153] 42.2s
+  step   60100  G 0.0407  D 1.2700  Aux 0.0712  GAux 0.7613  R1 0.0000
+  step   60200  G 0.0451  D 1.2654  Aux 0.0682  GAux 0.7773  R1 0.0000
+  step   60300  G 0.0357  D 1.2662  Aux 0.0723  GAux 0.7662  R1 0.0000
+  step   60400  G 0.0356  D 1.2699  Aux 0.0741  GAux 0.7568  R1 0.0000
+[epoch 154] 40.5s
+  step   60500  G 0.0445  D 1.2659  Aux 0.0711  GAux 0.7506  R1 0.0000
+  diag step   60500  Dreal 1.8638  Dfake -0.0141  Dwrong -3.8076  gap 5.6714  cls_acc 1.000  feat_std 1.346095  ema_div 0.0876  fake_std 0.1049  fake_min -0.3574  fake_max 0.4004
+  step   60600  G 0.0418  D 1.2655  Aux 0.0669  GAux 0.7689  R1 0.0000
+  step   60700  G 0.0436  D 1.2665  Aux 0.0757  GAux 0.7913  R1 0.0000
+  step   60800  G 0.0381  D 1.2652  Aux 0.0704  GAux 0.7640  R1 0.0000
+[epoch 155] 41.1s
+  step   60900  G 0.0445  D 1.2626  Aux 0.0670  GAux 0.7572  R1 0.0000
+  step   61000  G 0.0423  D 1.2617  Aux 0.0684  GAux 0.7707  R1 0.0000
+  diag step   61000  Dreal 1.5266  Dfake -0.0456  Dwrong -4.6611  gap 6.1877  cls_acc 1.000  feat_std 1.469643  ema_div 0.0872  fake_std 0.0969  fake_min -0.3750  fake_max 0.3457
+  step   61100  G 0.0394  D 1.2687  Aux 0.0721  GAux 0.7678  R1 0.0000
+  step   61200  G 0.0347  D 1.2689  Aux 0.0705  GAux 0.7651  R1 0.0000
+[epoch 156] 41.7s
+  step   61300  G 0.0410  D 1.2561  Aux 0.0664  GAux 0.7636  R1 0.0000
+  step   61400  G 0.0411  D 1.2601  Aux 0.0675  GAux 0.7753  R1 0.0000
+  step   61500  G 0.0414  D 1.2659  Aux 0.0683  GAux 0.7720  R1 0.0000
+  diag step   61500  Dreal 1.4337  Dfake -0.0679  Dwrong -4.8986  gap 6.3323  cls_acc 1.000  feat_std 1.462115  ema_div 0.0918  fake_std 0.1024  fake_min -0.4043  fake_max 0.3457
+  step   61600  G 0.0364  D 1.2704  Aux 0.0710  GAux 0.7546  R1 0.0000
+[epoch 157] 41.9s
+  step   61700  G 0.0407  D 1.2635  Aux 0.0697  GAux 0.7628  R1 0.0000
+  step   61800  G 0.0457  D 1.2548  Aux 0.0667  GAux 0.7841  R1 0.0000
+  step   61900  G 0.0380  D 1.2624  Aux 0.0691  GAux 0.7696  R1 0.0000
+  step   62000  G 0.0413  D 1.2649  Aux 0.0710  GAux 0.7506  R1 0.0000
+  diag step   62000  Dreal 1.5231  Dfake -0.0077  Dwrong -4.7488  gap 6.2718  cls_acc 0.984  feat_std 1.426850  ema_div 0.0938  fake_std 0.1083  fake_min -0.3984  fake_max 0.4043
+[epoch 158] 42.6s
+  step   62100  G 0.0417  D 1.2529  Aux 0.0667  GAux 0.7770  R1 0.0000
+  step   62200  G 0.0414  D 1.2595  Aux 0.0645  GAux 0.7787  R1 0.0000
+  step   62300  G 0.0413  D 1.2680  Aux 0.0692  GAux 0.7884  R1 0.0000
+  step   62400  G 0.0388  D 1.2633  Aux 0.0699  GAux 0.7759  R1 0.0000
+[epoch 159] 39.8s
+  step   62500  G 0.0417  D 1.2525  Aux 0.0667  GAux 0.7628  R1 0.0000
+  diag step   62500  Dreal 1.5444  Dfake -0.0136  Dwrong -3.9265  gap 5.4709  cls_acc 1.000  feat_std 1.269394  ema_div 0.0918  fake_std 0.1041  fake_min -0.3789  fake_max 0.3887
+  step   62600  G 0.0387  D 1.2612  Aux 0.0673  GAux 0.7593  R1 0.0000
+  step   62700  G 0.0383  D 1.2654  Aux 0.0661  GAux 0.7687  R1 0.0000
+[epoch 160] 41.0s
+  step   62800  G 0.0400  D 1.2608  Aux 0.0708  GAux 0.7754  R1 0.0000
+  step   62900  G 0.0435  D 1.2487  Aux 0.0642  GAux 0.7790  R1 0.0000
+  step   63000  G 0.0388  D 1.2602  Aux 0.0686  GAux 0.7877  R1 0.0000
+  diag step   63000  Dreal 1.6121  Dfake 0.0086  Dwrong -4.3821  gap 5.9942  cls_acc 1.000  feat_std 1.408819  ema_div 0.0933  fake_std 0.0994  fake_min -0.3223  fake_max 0.3301
+  step   63100  G 0.0391  D 1.2627  Aux 0.0670  GAux 0.7770  R1 0.0000
+[epoch 161] 40.3s
+  step   63200  G 0.0400  D 1.2609  Aux 0.0677  GAux 0.7656  R1 0.0000
+  step   63300  G 0.0472  D 1.2490  Aux 0.0639  GAux 0.7719  R1 0.0000
+  step   63400  G 0.0407  D 1.2578  Aux 0.0673  GAux 0.7871  R1 0.0000
+  step   63500  G 0.0405  D 1.2559  Aux 0.0680  GAux 0.7772  R1 0.0000
+  diag step   63500  Dreal 1.7886  Dfake -0.0449  Dwrong -4.4759  gap 6.2645  cls_acc 1.000  feat_std 1.488185  ema_div 0.0863  fake_std 0.0935  fake_min -0.3789  fake_max 0.3828
+[epoch 162] 40.8s
+  step   63600  G 0.0384  D 1.2558  Aux 0.0661  GAux 0.7815  R1 0.0000
+  step   63700  G 0.0386  D 1.2493  Aux 0.0647  GAux 0.7959  R1 0.0000
+  step   63800  G 0.0372  D 1.2537  Aux 0.0677  GAux 0.7784  R1 0.0000
+  step   63900  G 0.0388  D 1.2610  Aux 0.0686  GAux 0.7711  R1 0.0000
+[epoch 163] 40.2s
+  step   64000  G 0.0387  D 1.2583  Aux 0.0648  GAux 0.7702  R1 0.0000
+  diag step   64000  Dreal 1.5841  Dfake 0.0383  Dwrong -5.0165  gap 6.6005  cls_acc 1.000  feat_std 1.394973  ema_div 0.0886  fake_std 0.1004  fake_min -0.3242  fake_max 0.4512
+  step   64100  G 0.0468  D 1.2517  Aux 0.0656  GAux 0.7873  R1 0.0000
+  step   64200  G 0.0444  D 1.2501  Aux 0.0661  GAux 0.7975  R1 0.0000
+  step   64300  G 0.0376  D 1.2547  Aux 0.0683  GAux 0.7982  R1 0.0000
+[epoch 164] 42.2s
+  step   64400  G 0.0410  D 1.2498  Aux 0.0639  GAux 0.7686  R1 0.0000
+  step   64500  G 0.0371  D 1.2479  Aux 0.0646  GAux 0.7686  R1 0.0000
+  diag step   64500  Dreal 1.5682  Dfake -0.0364  Dwrong -4.1533  gap 5.7215  cls_acc 1.000  feat_std 1.386966  ema_div 0.0901  fake_std 0.1051  fake_min -0.4238  fake_max 0.3125
+  step   64600  G 0.0390  D 1.2538  Aux 0.0656  GAux 0.7682  R1 0.0000
+  step   64700  G 0.0370  D 1.2546  Aux 0.0630  GAux 0.7737  R1 0.0000
+[epoch 165] 41.6s
+  step   64800  G 0.0421  D 1.2507  Aux 0.0638  GAux 0.7766  R1 0.0000
+  step   64900  G 0.0390  D 1.2527  Aux 0.0645  GAux 0.7732  R1 0.0000
+  step   65000  G 0.0469  D 1.2514  Aux 0.0662  GAux 0.7942  R1 0.0000
+  diag step   65000  Dreal 1.6135  Dfake -0.1033  Dwrong -4.7723  gap 6.3859  cls_acc 1.000  feat_std 1.510286  ema_div 0.0873  fake_std 0.1012  fake_min -0.3203  fake_max 0.3555
+  step   65100  G 0.0372  D 1.2525  Aux 0.0665  GAux 0.8070  R1 0.0000
+[epoch 166] 42.8s
+  step   65200  G 0.0337  D 1.2506  Aux 0.0617  GAux 0.7890  R1 0.0000
+  step   65300  G 0.0408  D 1.2478  Aux 0.0650  GAux 0.7958  R1 0.0000
+  step   65400  G 0.0366  D 1.2510  Aux 0.0613  GAux 0.7637  R1 0.0000
+  step   65500  G 0.0405  D 1.2610  Aux 0.0690  GAux 0.7751  R1 0.0000
+  diag step   65500  Dreal 1.9246  Dfake 0.0564  Dwrong -4.3058  gap 6.2304  cls_acc 1.000  feat_std 1.460485  ema_div 0.0817  fake_std 0.1022  fake_min -0.3477  fake_max 0.3906
+[epoch 167] 42.5s
+  step   65600  G 0.0465  D 1.2435  Aux 0.0628  GAux 0.7833  R1 0.0000
+  step   65700  G 0.0375  D 1.2423  Aux 0.0614  GAux 0.8044  R1 0.0000
+  step   65800  G 0.0395  D 1.2486  Aux 0.0646  GAux 0.7754  R1 0.0000
+  step   65900  G 0.0362  D 1.2502  Aux 0.0640  GAux 0.7872  R1 0.0000
+[epoch 168] 41.5s
+  step   66000  G 0.0413  D 1.2430  Aux 0.0606  GAux 0.7837  R1 0.0000
+  diag step   66000  Dreal 1.5476  Dfake 0.0024  Dwrong -4.4665  gap 6.0141  cls_acc 0.953  feat_std 1.391502  ema_div 0.0892  fake_std 0.0995  fake_min -0.3516  fake_max 0.3145
+  step   66100  G 0.0437  D 1.2450  Aux 0.0628  GAux 0.7842  R1 0.0000
+  step   66200  G 0.0418  D 1.2488  Aux 0.0641  GAux 0.7707  R1 0.0000
+  step   66300  G 0.0378  D 1.2560  Aux 0.0667  GAux 0.7916  R1 0.0000
+[epoch 169] 41.4s
+  step   66400  G 0.0402  D 1.2401  Aux 0.0598  GAux 0.7950  R1 0.0000
+  step   66500  G 0.0410  D 1.2414  Aux 0.0624  GAux 0.7935  R1 0.0000
+  diag step   66500  Dreal 1.6423  Dfake -0.0653  Dwrong -4.7131  gap 6.3554  cls_acc 1.000  feat_std 1.461672  ema_div 0.0852  fake_std 0.0999  fake_min -0.3535  fake_max 0.2852
+  step   66600  G 0.0350  D 1.2457  Aux 0.0655  GAux 0.7710  R1 0.0000
+[epoch 170] 41.8s
+  step   66700  G 0.0394  D 1.2506  Aux 0.0637  GAux 0.7763  R1 0.0000
+  step   66800  G 0.0465  D 1.2385  Aux 0.0595  GAux 0.8026  R1 0.0000
+  step   66900  G 0.0377  D 1.2458  Aux 0.0623  GAux 0.7920  R1 0.0000
+  step   67000  G 0.0346  D 1.2466  Aux 0.0613  GAux 0.7768  R1 0.0000
+  diag step   67000  Dreal 1.7872  Dfake 0.0266  Dwrong -4.2339  gap 6.0211  cls_acc 1.000  feat_std 1.451148  ema_div 0.0845  fake_std 0.0997  fake_min -0.3594  fake_max 0.3594
+[epoch 171] 40.6s
+  step   67100  G 0.0433  D 1.2472  Aux 0.0632  GAux 0.7913  R1 0.0000
+  step   67200  G 0.0459  D 1.2353  Aux 0.0574  GAux 0.7838  R1 0.0000
+  step   67300  G 0.0414  D 1.2372  Aux 0.0615  GAux 0.8130  R1 0.0000
+  step   67400  G 0.0390  D 1.2523  Aux 0.0632  GAux 0.8041  R1 0.0000
+[epoch 172] 40.9s
+  step   67500  G 0.0409  D 1.2442  Aux 0.0621  GAux 0.8017  R1 0.0000
+  diag step   67500  Dreal 1.7271  Dfake 0.0411  Dwrong -5.1639  gap 6.8910  cls_acc 1.000  feat_std 1.471924  ema_div 0.0838  fake_std 0.0899  fake_min -0.3242  fake_max 0.3027
+  step   67600  G 0.0386  D 1.2341  Aux 0.0580  GAux 0.8034  R1 0.0000
+  step   67700  G 0.0405  D 1.2421  Aux 0.0636  GAux 0.8055  R1 0.0000
+  step   67800  G 0.0405  D 1.2415  Aux 0.0592  GAux 0.8009  R1 0.0000
+[epoch 173] 41.4s
+  step   67900  G 0.0400  D 1.2420  Aux 0.0602  GAux 0.7825  R1 0.0000
+  step   68000  G 0.0449  D 1.2331  Aux 0.0591  GAux 0.7970  R1 0.0000
+  diag step   68000  Dreal 1.6661  Dfake 0.0103  Dwrong -4.9816  gap 6.6477  cls_acc 1.000  feat_std 1.499090  ema_div 0.0876  fake_std 0.1058  fake_min -0.3555  fake_max 0.3906
+  step   68100  G 0.0373  D 1.2429  Aux 0.0638  GAux 0.8091  R1 0.0000
+  step   68200  G 0.0439  D 1.2458  Aux 0.0634  GAux 0.7952  R1 0.0000
+[epoch 174] 42.4s
+  step   68300  G 0.0422  D 1.2362  Aux 0.0603  GAux 0.7970  R1 0.0000
+  step   68400  G 0.0402  D 1.2345  Aux 0.0595  GAux 0.7981  R1 0.0000
+  step   68500  G 0.0393  D 1.2388  Aux 0.0604  GAux 0.7913  R1 0.0000
+  diag step   68500  Dreal 1.6298  Dfake 0.0160  Dwrong -4.2996  gap 5.9294  cls_acc 1.000  feat_std 1.478966  ema_div 0.0888  fake_std 0.0974  fake_min -0.3652  fake_max 0.3281
+  step   68600  G 0.0411  D 1.2451  Aux 0.0611  GAux 0.7911  R1 0.0000
+[epoch 175] 40.7s
+  step   68700  G 0.0410  D 1.2364  Aux 0.0600  GAux 0.7992  R1 0.0000
+  step   68800  G 0.0400  D 1.2393  Aux 0.0598  GAux 0.7949  R1 0.0000
+  step   68900  G 0.0431  D 1.2380  Aux 0.0612  GAux 0.8070  R1 0.0000
+  step   69000  G 0.0333  D 1.2428  Aux 0.0602  GAux 0.7998  R1 0.0000
+  diag step   69000  Dreal 1.6126  Dfake -0.0341  Dwrong -4.6144  gap 6.2270  cls_acc 1.000  feat_std 1.485608  ema_div 0.0825  fake_std 0.0969  fake_min -0.3340  fake_max 0.3438
+[epoch 176] 41.6s
+  step   69100  G 0.0434  D 1.2326  Aux 0.0580  GAux 0.7962  R1 0.0000
+  step   69200  G 0.0408  D 1.2369  Aux 0.0601  GAux 0.8085  R1 0.0000
+  step   69300  G 0.0382  D 1.2422  Aux 0.0618  GAux 0.7931  R1 0.0000
+  step   69400  G 0.0401  D 1.2358  Aux 0.0577  GAux 0.7968  R1 0.0000
+[epoch 177] 41.4s
+  step   69500  G 0.0430  D 1.2304  Aux 0.0591  GAux 0.8105  R1 0.0000
+  diag step   69500  Dreal 1.7032  Dfake 0.0157  Dwrong -4.4249  gap 6.1281  cls_acc 1.000  feat_std 1.581466  ema_div 0.0887  fake_std 0.1008  fake_min -0.3203  fake_max 0.3027
+  step   69600  G 0.0388  D 1.2334  Aux 0.0591  GAux 0.8048  R1 0.0000
+  step   69700  G 0.0407  D 1.2365  Aux 0.0574  GAux 0.7908  R1 0.0000
+  step   69800  G 0.0398  D 1.2373  Aux 0.0594  GAux 0.7923  R1 0.0000
+[epoch 178] 39.5s
+  step   69900  G 0.0424  D 1.2310  Aux 0.0561  GAux 0.8059  R1 0.0000
+  step   70000  G 0.0425  D 1.2340  Aux 0.0595  GAux 0.8113  R1 0.0000
+  diag step   70000  Dreal 1.7083  Dfake -0.0409  Dwrong -4.1431  gap 5.8515  cls_acc 1.000  feat_std 1.465687  ema_div 0.0833  fake_std 0.0966  fake_min -0.3105  fake_max 0.4766
+  step   70100  G 0.0400  D 1.2361  Aux 0.0590  GAux 0.8095  R1 0.0000
+  step   70200  G 0.0397  D 1.2396  Aux 0.0603  GAux 0.8098  R1 0.0000
+[epoch 179] 39.4s
+  step   70300  G 0.0432  D 1.2289  Aux 0.0570  GAux 0.8114  R1 0.0000
+  step   70400  G 0.0412  D 1.2302  Aux 0.0569  GAux 0.8274  R1 0.0000
+  step   70500  G 0.0387  D 1.2346  Aux 0.0595  GAux 0.8023  R1 0.0000
+  diag step   70500  Dreal 1.4382  Dfake -0.0172  Dwrong -4.5272  gap 5.9654  cls_acc 1.000  feat_std 1.527723  ema_div 0.0840  fake_std 0.0892  fake_min -0.3555  fake_max 0.2949
+[epoch 180] 39.4s
+  step   70600  G 0.0412  D 1.2377  Aux 0.0603  GAux 0.8118  R1 0.0000
+  step   70700  G 0.0400  D 1.2320  Aux 0.0573  GAux 0.8092  R1 0.0000
+  step   70800  G 0.0427  D 1.2312  Aux 0.0610  GAux 0.8276  R1 0.0000
+  step   70900  G 0.0397  D 1.2355  Aux 0.0573  GAux 0.7933  R1 0.0000
+[epoch 181] 38.9s
+  step   71000  G 0.0435  D 1.2355  Aux 0.0565  GAux 0.7976  R1 0.0000
+  diag step   71000  Dreal 1.6238  Dfake -0.0256  Dwrong -4.5725  gap 6.1963  cls_acc 1.000  feat_std 1.512757  ema_div 0.0848  fake_std 0.0984  fake_min -0.4141  fake_max 0.3496
+  step   71100  G 0.0423  D 1.2289  Aux 0.0561  GAux 0.8078  R1 0.0000
+  step   71200  G 0.0423  D 1.2297  Aux 0.0565  GAux 0.8219  R1 0.0000
+  step   71300  G 0.0408  D 1.2332  Aux 0.0603  GAux 0.8245  R1 0.0000
+[epoch 182] 39.2s
+  step   71400  G 0.0411  D 1.2272  Aux 0.0571  GAux 0.8163  R1 0.0000
+  step   71500  G 0.0365  D 1.2283  Aux 0.0559  GAux 0.7943  R1 0.0000
+  diag step   71500  Dreal 1.5199  Dfake -0.0366  Dwrong -4.7953  gap 6.3152  cls_acc 1.000  feat_std 1.542848  ema_div 0.0827  fake_std 0.0950  fake_min -0.3789  fake_max 0.3066
+  step   71600  G 0.0425  D 1.2333  Aux 0.0546  GAux 0.8107  R1 0.0000
+  step   71700  G 0.0374  D 1.2366  Aux 0.0592  GAux 0.8116  R1 0.0000
+[epoch 183] 39.0s
+  step   71800  G 0.0424  D 1.2298  Aux 0.0568  GAux 0.8086  R1 0.0000
+  step   71900  G 0.0418  D 1.2284  Aux 0.0587  GAux 0.8208  R1 0.0000
+  step   72000  G 0.0410  D 1.2266  Aux 0.0576  GAux 0.8086  R1 0.0000
+  diag step   72000  Dreal 1.6979  Dfake 0.0001  Dwrong -4.8705  gap 6.5684  cls_acc 1.000  feat_std 1.506499  ema_div 0.0760  fake_std 0.0943  fake_min -0.3145  fake_max 0.2637
+  step   72100  G 0.0377  D 1.2327  Aux 0.0592  GAux 0.8332  R1 0.0000
+[epoch 184] 42.0s
+  step   72200  G 0.0426  D 1.2270  Aux 0.0574  GAux 0.8079  R1 0.0000
+  step   72300  G 0.0406  D 1.2297  Aux 0.0577  GAux 0.8215  R1 0.0000
+  step   72400  G 0.0379  D 1.2283  Aux 0.0560  GAux 0.8200  R1 0.0000
+  step   72500  G 0.0423  D 1.2344  Aux 0.0570  GAux 0.8155  R1 0.0000
+  diag step   72500  Dreal 1.6111  Dfake -0.0325  Dwrong -4.1291  gap 5.7402  cls_acc 1.000  feat_std 1.472822  ema_div 0.0844  fake_std 0.0938  fake_min -0.3223  fake_max 0.2930
+[epoch 185] 42.3s
+  step   72600  G 0.0414  D 1.2218  Aux 0.0527  GAux 0.8043  R1 0.0000
+  step   72700  G 0.0441  D 1.2237  Aux 0.0556  GAux 0.8295  R1 0.0000
+  step   72800  G 0.0415  D 1.2288  Aux 0.0577  GAux 0.8272  R1 0.0000
+  step   72900  G 0.0389  D 1.2283  Aux 0.0566  GAux 0.8280  R1 0.0000
+[epoch 186] 41.5s
+  step   73000  G 0.0387  D 1.2225  Aux 0.0532  GAux 0.7969  R1 0.0000
+  diag step   73000  Dreal 1.7153  Dfake -0.0039  Dwrong -4.1952  gap 5.9105  cls_acc 1.000  feat_std 1.442363  ema_div 0.0784  fake_std 0.0964  fake_min -0.3398  fake_max 0.3281
+  step   73100  G 0.0431  D 1.2222  Aux 0.0538  GAux 0.8116  R1 0.0000
+  step   73200  G 0.0381  D 1.2249  Aux 0.0555  GAux 0.8090  R1 0.0000
+  step   73300  G 0.0404  D 1.2350  Aux 0.0592  GAux 0.8247  R1 0.0000
+[epoch 187] 42.8s
+  step   73400  G 0.0407  D 1.2183  Aux 0.0543  GAux 0.8226  R1 0.0000
+  step   73500  G 0.0397  D 1.2284  Aux 0.0554  GAux 0.8055  R1 0.0000
+  diag step   73500  Dreal 1.7798  Dfake -0.0093  Dwrong -4.9038  gap 6.6836  cls_acc 1.000  feat_std 1.543009  ema_div 0.0816  fake_std 0.0868  fake_min -0.3496  fake_max 0.2773
+  step   73600  G 0.0426  D 1.2240  Aux 0.0550  GAux 0.8214  R1 0.0000
+  step   73700  G 0.0379  D 1.2282  Aux 0.0559  GAux 0.7924  R1 0.0000
+[epoch 188] 41.7s
+  step   73800  G 0.0455  D 1.2164  Aux 0.0555  GAux 0.8389  R1 0.0000
+  step   73900  G 0.0355  D 1.2264  Aux 0.0556  GAux 0.8208  R1 0.0000
+  step   74000  G 0.0372  D 1.2309  Aux 0.0549  GAux 0.8036  R1 0.0000
+  diag step   74000  Dreal 1.7707  Dfake -0.0031  Dwrong -4.2574  gap 6.0281  cls_acc 1.000  feat_std 1.564247  ema_div 0.0798  fake_std 0.0920  fake_min -0.3262  fake_max 0.3477
+  step   74100  G 0.0440  D 1.2326  Aux 0.0572  GAux 0.8145  R1 0.0000
+[epoch 189] 38.6s
+  step   74200  G 0.0423  D 1.2168  Aux 0.0531  GAux 0.8175  R1 0.0000
+  step   74300  G 0.0383  D 1.2269  Aux 0.0557  GAux 0.8215  R1 0.0000
+  step   74400  G 0.0390  D 1.2238  Aux 0.0523  GAux 0.8048  R1 0.0000
+[epoch 190] 35.6s
+  step   74500  G 0.0428  D 1.2293  Aux 0.0564  GAux 0.8097  R1 0.0000
+  diag step   74500  Dreal 1.7375  Dfake -0.0168  Dwrong -5.0243  gap 6.7618  cls_acc 1.000  feat_std 1.642862  ema_div 0.0841  fake_std 0.0946  fake_min -0.2910  fake_max 0.3047
+  step   74600  G 0.0408  D 1.2197  Aux 0.0520  GAux 0.8049  R1 0.0000
+  step   74700  G 0.0422  D 1.2239  Aux 0.0555  GAux 0.8179  R1 0.0000
+  step   74800  G 0.0373  D 1.2253  Aux 0.0552  GAux 0.8023  R1 0.0000
+[epoch 191] 35.5s
+  step   74900  G 0.0440  D 1.2237  Aux 0.0557  GAux 0.8212  R1 0.0000
+  step   75000  G 0.0401  D 1.2148  Aux 0.0509  GAux 0.8432  R1 0.0000
+  diag step   75000  Dreal 1.5873  Dfake -0.0027  Dwrong -4.4706  gap 6.0580  cls_acc 1.000  feat_std 1.543274  ema_div 0.0791  fake_std 0.0921  fake_min -0.3301  fake_max 0.2871
+  step   75100  G 0.0414  D 1.2203  Aux 0.0552  GAux 0.8207  R1 0.0000
+  step   75200  G 0.0397  D 1.2212  Aux 0.0558  GAux 0.8204  R1 0.0000
+[epoch 192] 35.5s
+  step   75300  G 0.0387  D 1.2258  Aux 0.0550  GAux 0.8169  R1 0.0000
+  step   75400  G 0.0433  D 1.2144  Aux 0.0523  GAux 0.8227  R1 0.0000
+  step   75500  G 0.0352  D 1.2224  Aux 0.0538  GAux 0.8040  R1 0.0000
+  diag step   75500  Dreal 1.5644  Dfake -0.0145  Dwrong -4.8310  gap 6.3954  cls_acc 1.000  feat_std 1.595194  ema_div 0.0809  fake_std 0.0881  fake_min -0.2969  fake_max 0.3281
+  step   75600  G 0.0433  D 1.2231  Aux 0.0528  GAux 0.8110  R1 0.0000
+[epoch 193] 35.7s
+  step   75700  G 0.0444  D 1.2221  Aux 0.0546  GAux 0.8202  R1 0.0000
+  step   75800  G 0.0436  D 1.2160  Aux 0.0536  GAux 0.8360  R1 0.0000
+  step   75900  G 0.0409  D 1.2198  Aux 0.0537  GAux 0.8343  R1 0.0000
+  step   76000  G 0.0399  D 1.2216  Aux 0.0561  GAux 0.8233  R1 0.0000
+  diag step   76000  Dreal 1.4205  Dfake -0.0100  Dwrong -4.1475  gap 5.5680  cls_acc 1.000  feat_std 1.521815  ema_div 0.0816  fake_std 0.0967  fake_min -0.3086  fake_max 0.3574
+[epoch 194] 35.5s
+  step   76100  G 0.0381  D 1.2194  Aux 0.0534  GAux 0.8178  R1 0.0000
+  step   76200  G 0.0398  D 1.2147  Aux 0.0497  GAux 0.8222  R1 0.0000
+  step   76300  G 0.0415  D 1.2192  Aux 0.0542  GAux 0.8215  R1 0.0000
+  step   76400  G 0.0372  D 1.2231  Aux 0.0568  GAux 0.8231  R1 0.0000
+[epoch 195] 35.7s
+  step   76500  G 0.0405  D 1.2182  Aux 0.0542  GAux 0.8243  R1 0.0000
+  diag step   76500  Dreal 1.7520  Dfake -0.0300  Dwrong -3.7600  gap 5.5119  cls_acc 1.000  feat_std 1.567828  ema_div 0.0811  fake_std 0.0963  fake_min -0.3438  fake_max 0.4863
+  step   76600  G 0.0432  D 1.2091  Aux 0.0507  GAux 0.8222  R1 0.0000
+  step   76700  G 0.0392  D 1.2133  Aux 0.0520  GAux 0.8245  R1 0.0000
+  step   76800  G 0.0398  D 1.2166  Aux 0.0526  GAux 0.8120  R1 0.0000
+[epoch 196] 41.2s
+  step   76900  G 0.0446  D 1.2088  Aux 0.0517  GAux 0.8434  R1 0.0000
+  step   77000  G 0.0383  D 1.2159  Aux 0.0541  GAux 0.8338  R1 0.0000
+  diag step   77000  Dreal 1.7582  Dfake -0.0020  Dwrong -3.9341  gap 5.6923  cls_acc 0.984  feat_std 1.462905  ema_div 0.0791  fake_std 0.0895  fake_min -0.3262  fake_max 0.3711
+  step   77100  G 0.0411  D 1.2132  Aux 0.0527  GAux 0.8429  R1 0.0000
+  step   77200  G 0.0432  D 1.2178  Aux 0.0525  GAux 0.8339  R1 0.0000
+[epoch 197] 42.3s
+  step   77300  G 0.0455  D 1.2075  Aux 0.0502  GAux 0.8306  R1 0.0000
+  step   77400  G 0.0429  D 1.2080  Aux 0.0491  GAux 0.8486  R1 0.0000
+  step   77500  G 0.0385  D 1.2178  Aux 0.0551  GAux 0.8566  R1 0.0000
+  diag step   77500  Dreal 1.4292  Dfake -0.0269  Dwrong -4.2331  gap 5.6623  cls_acc 1.000  feat_std 1.523697  ema_div 0.0804  fake_std 0.0882  fake_min -0.3281  fake_max 0.3555
+  step   77600  G 0.0374  D 1.2236  Aux 0.0551  GAux 0.8371  R1 0.0000
+[epoch 198] 42.9s
+  step   77700  G 0.0454  D 1.2093  Aux 0.0505  GAux 0.8337  R1 0.0000
+  step   77800  G 0.0390  D 1.2118  Aux 0.0531  GAux 0.8502  R1 0.0000
+  step   77900  G 0.0403  D 1.2168  Aux 0.0504  GAux 0.8469  R1 0.0000
+  step   78000  G 0.0383  D 1.2178  Aux 0.0537  GAux 0.8367  R1 0.0000
+  diag step   78000  Dreal 1.5958  Dfake -0.0291  Dwrong -3.6706  gap 5.2664  cls_acc 1.000  feat_std 1.556450  ema_div 0.0815  fake_std 0.0939  fake_min -0.3086  fake_max 0.3438
+[epoch 199] 42.8s

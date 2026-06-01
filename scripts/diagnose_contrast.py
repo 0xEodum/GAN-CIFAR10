@@ -6,11 +6,11 @@ from pathlib import Path
 
 import torch
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from src.config import GAN
-from src.data.cifar_dataset import build_loader
-from src.models.dcgan import Generator
+from gan_cifar.config import GAN
+from gan_cifar.data.cifar_dataset import build_loader
+from gan_cifar.models.dcgan import Generator
 
 
 def stats(name: str, x: torch.Tensor) -> None:

@@ -2,7 +2,7 @@
 
 import torch
 
-from src.training.trainer import _image_stats
+from gan_cifar.training.trainer import _image_stats
 
 
 def test_image_stats_reports_dynamic_range():
